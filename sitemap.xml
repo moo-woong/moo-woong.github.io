@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://moo-woong.github.io/first-blog/</loc>
-    <lastmod>2022-10-16T06:02:54-07:00</lastmod>
+    <loc>http://moo-woong.github.io/</loc>
+    <lastmod>2022-10-16T06:47:28-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://moo-woong.github.io/</loc>
+    <loc>http://moo-woong.github.io/paper/</loc>
+    <lastmod>2022-10-16T06:47:28-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://moo-woong.github.io/first-blog/</loc>
     <lastmod>2022-10-16T06:02:54-07:00</lastmod>
   </url>
   
