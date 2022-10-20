@@ -9,7 +9,16 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 16 Oct 2022 08:15:52 -0700</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 20 Oct 2022 09:39:55 -0700</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second</title>
+      <link>https://moo-woong.github.io/posts/second/</link>
+      <pubDate>Thu, 20 Oct 2022 09:39:55 -0700</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/second/</guid>
+      <description>Write your contents</description>
+    </item>
+    
     <item>
       <title>2022 10 17 Github Hugo</title>
       <link>https://moo-woong.github.io/posts/2022-10-17-github-hugo/</link>
