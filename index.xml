@@ -9,9 +9,19 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 01 Nov 2022 22:54:51 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Nov 2022 23:23:39 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Minikube 설치</title>
+      <title>LeetCode 공부 - Two Sum</title>
+      <link>https://moo-woong.github.io/posts/algo_1_two_some/</link>
+      <pubDate>Wed, 30 Nov 2022 23:23:39 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algo_1_two_some/</guid>
+      <description>LeeCode(1) - Two Sum 문제 integer 배열과 target이 주어질 때, 배열에서 두 정수의 합이 target을 만족하는 두 index를 반환
+입력 nums = [2,7,11,15], target = 9 출력 [0,1] 풀이  배열 순회 중 현재 배열의 값과 target과의 diff 값이 hash table에 있으면, diff key의 value와 현재 배열 index를 리턴. hash table에 diff값이 없으면, 현재 배열 index의 value를 key로, index를 value로 table에 저장. 배열 순회.  코드 class Solution { public: vector&amp;lt;int&amp;gt; twoSum(vector&amp;lt;int&amp;gt;&amp;amp; nums, int target) { unordered_map&amp;lt;int, int&amp;gt; umap; vector&amp;lt;int&amp;gt; ret; for (int i = 0; i &amp;lt; nums.</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu에 Minikube 설치하기</title>
       <link>https://moo-woong.github.io/posts/minikube/</link>
       <pubDate>Tue, 01 Nov 2022 22:54:51 +0900</pubDate>
       
