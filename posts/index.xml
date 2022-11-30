@@ -9,7 +9,17 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 30 Nov 2022 23:23:39 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 00:27:00 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 공부 - Palindrome Number</title>
+      <link>https://moo-woong.github.io/posts/algo_9_palindrome_number/</link>
+      <pubDate>Thu, 01 Dec 2022 00:27:00 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algo_9_palindrome_number/</guid>
+      <description>LeeCode(9) - Palindrome Number 문제 integer x가 주어질 때, x가 Palindrome(회문)을 만족하면 true를 return, 아니라면 false를 리턴
+입력 x = 121 출력 true 풀이  입력 x를 string으로 변환 앞부분을 가르키는 index front와 뒷부분을 가르키는 index back을 만들어 앞부분은 증가를, 뒷부분은 감소하며 전체 string 비교 front가 back보다 커질 때 까지 비교하여 front가 back보다 커진다면 회문으로 판단, 순회를 종료하고 true반환. 비교 중 다른 값이 나온다면 곧바로 false반환  코드 class Solution { public: bool isPalindrome(int x) { string s = to_string(x); int front = 0, back = s.</description>
+    </item>
+    
     <item>
       <title>LeetCode 공부 - Two Sum</title>
       <link>https://moo-woong.github.io/posts/algo_1_two_some/</link>
