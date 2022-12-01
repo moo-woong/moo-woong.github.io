@@ -9,7 +9,38 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Dec 2022 00:27:00 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Dec 2022 23:38:10 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 공부 - Merge Two Sorted Lists</title>
+      <link>https://moo-woong.github.io/posts/algo_21_merge_two_sorted_lists/</link>
+      <pubDate>Thu, 01 Dec 2022 23:38:10 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algo_21_merge_two_sorted_lists/</guid>
+      <description>LeeCode(21) - Merge Two Sorted Lists 문제 두 Linked List의 header가 주어진다. 두 리스트를 정렬하여 하나의 리스트로 반환하라.
+입력 list1 = [1,2,4], list2 = [1,3,4] 출력 [1,1,2,3,4,4] 풀이  두 리스트를 순회하면서 작은값을 취하고, 취한 리스트는 다음 노드로 이동하여 두 리스트가 모두 NULL일 때 까지 순회한다. 두 리스트는 모두 정렬된 상태이므로, 함수 도입부에서 한 리스트가 NULL이라면 다른 리스트를 반환한다. 두 리스트 모두 NULL인 경우가 있어서 헷갈렸는데, list1이 NULL일 경우 NULL인 list2를 리턴해도 무방했다.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 공부 - Valid Parentheses</title>
+      <link>https://moo-woong.github.io/posts/algo_20_valid_parentheses/</link>
+      <pubDate>Thu, 01 Dec 2022 23:05:08 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algo_20_valid_parentheses/</guid>
+      <description>LeeCode(20) - Valid Parentheses 문제 소괄호, 중괄호, 대괄호로 이루어진 문자열이 주어진다. 이 문자열의 괄호들이 알맞은 pair라면 true를, 아니라면 false를 반환한다.
+입력  s = &amp;quot;()[]{}&amp;quot; 출력 true 풀이  전형적인 stack문제로, 괄호가 닫힐때 마다 pair를 확인한다. 주어진 문자열의 문자들을 순회하면서 문자가 여는괄호면 stack에 쌓고, 닫는 괄호라면, 현재 stack에서 top()과 pair비교 후 pair라면 pop을, 아니면 false를 리턴한다.  코드 Visual studio에서 바로 실행하도록 임의의 main문을 함께 첨부합니다. isValid()만 보시면 됩니다.
+#include&amp;lt;iostream&amp;gt; #include&amp;lt;string&amp;gt; #include&amp;lt;stack&amp;gt; using namespace std; bool isValid(string s) { stack&amp;lt;char&amp;gt; st; for (char c : s) { if (c == &#39;(&#39; || c == &#39;{&#39; || c == &#39;[&#39;) { st.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 공부 - Longest Common Prefix</title>
+      <link>https://moo-woong.github.io/posts/algo_14_longest_common_prefix/</link>
+      <pubDate>Thu, 01 Dec 2022 22:37:08 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algo_14_longest_common_prefix/</guid>
+      <description>LeeCode(14) - Longest Common Prefix 문제 문자열 배열이 주어진다. 이 문자열 배열에서 문자가 공통인 부분만큼 문자열로 반환하라.
+입력 strs = [&amp;quot;flower&amp;quot;,&amp;quot;flow&amp;quot;,&amp;quot;flight&amp;quot;] 출력 &amp;quot;fl&amp;quot; 풀이  문자열들을 사전순으로 정렬하고, 첫 번째 문자열을 기준으로 비교하여 같은 문자라면 index를 순차적으로 증가시킨다. 문자가 같을 때 까지 증가하다가 다른 문자가 나오면 기존까지 저장한 문자열을 반환한다.  코드 string longestCommonPrefix(vector&amp;lt;string&amp;gt;&amp;amp; strs) { vector&amp;lt;string&amp;gt; s = strs; sort(s.begin(), s.end()); string ret = &amp;quot;&amp;quot;; string pilot = s.at(0); for (int i = 0; i &amp;lt; pilot.</description>
+    </item>
+    
     <item>
       <title>LeetCode 공부 - Palindrome Number</title>
       <link>https://moo-woong.github.io/posts/algo_9_palindrome_number/</link>
