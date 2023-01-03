@@ -9,7 +9,20 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Dec 2022 23:40:46 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 21:25:33 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Dev/Infra] XXX is not in the sudoers file.  This incident will be reported.</title>
+      <link>https://moo-woong.github.io/posts/dev_env/sudoers_permission/</link>
+      <pubDate>Tue, 03 Jan 2023 21:25:33 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/dev_env/sudoers_permission/</guid>
+      <description>XXX is not in the sudoers file. This incident will be reported. Ubuntu, CentOS 등 리눅스 환경을 새로 설치하면 만나는 오류. 개발 툴을 설정하기 위해 유틸들을 설치할때 sudo를 사용하다 마주하게 된다.
+XXX is not in the sudoers file. This incident will be reported. 원인 현재 접속중인 계정이 sudoers에 등록되지 않아 발생한다. sudoers파일에 현재 계정을 등록하여 sudo권한을 주자.
+ sudo의 뜻은? &amp;ldquo;super user do&amp;rdquo;.
+  su 뜻은? &amp;ldquo;super user&amp;rdquo;
+ 해결법  su 명령어로 root계정으로 전환  [hugh@localhost ~]$ su Password: #비밀번호 입력 [root@localhost hugh]# [root@localhost hugh]# /etc/sudoers 파일에서 현재 계정을 추가   99 ## Allow root to run any commands anywhere 100 root ALL=(ALL) ALL 101 hugh ALL=(ALL) ALL # &amp;lt;-- sudo권한이 필요한 계정 추가 root계정에서 로그아웃하고 추가한 계정에서 sudo권한이 필요한 명령어 수행  [root@localhost hugh]# exit exit [hugh@localhost ~]$ [hugh@localhost ~]$ [hugh@localhost ~]$ sudo yum install -y vim [sudo] password for hugh: Loaded plugins: fastestmirror, langpacks Loading mirror speeds from cached hostfile * base: mirror.</description>
+    </item>
+    
     <item>
       <title>LeetCode 공부 - Remove Duplicates from Sorted List</title>
       <link>https://moo-woong.github.io/posts/algorithm/algo_83_remove_duplicates_from_sorted_list/</link>
@@ -175,10 +188,10 @@
     
     <item>
       <title>Ubuntu에 Minikube 설치하기</title>
-      <link>https://moo-woong.github.io/posts/dev_env/minikube/</link>
+      <link>https://moo-woong.github.io/posts/kubernetes/minikube/</link>
       <pubDate>Tue, 01 Nov 2022 22:54:51 +0900</pubDate>
       
-      <guid>https://moo-woong.github.io/posts/dev_env/minikube/</guid>
+      <guid>https://moo-woong.github.io/posts/kubernetes/minikube/</guid>
       <description>Minikube 설치 Kubernetes 학습을 위해서 환경이 필요하게 되었습니다. 개인 학습을 위해서는 Vanilla k8s, Amazon EKS, 그리고 Minikube 등 다양한 학습환경이 있습니다. 저는 Minikube로 선택했습니다. 이유는 다음과 같습니다.
  Vanilla k8s는 환경설정에 많은 리소스도 필요하고 회사에서 proxy환경에서 설치하는데 애를 많이 먹은 기억이 있어서 환경설정에 많은 시간을 할애하기 싫었습니다. Amazon EKS는 간단하게 구축이 가능하지만 약간의 비용이 발생할 수 있다는 점, 그리고 지지고 볶고 뜯고 맛보고 즐겨야하는데 EKS에서는 잘 할 수 있을까?에 대한 의구심이 있어 Amazon EKS 사용은 나중으로 미뤘습니다.</description>
     </item>
