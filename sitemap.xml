@@ -3,88 +3,143 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_70_climbing_stairs/</loc>
-    <lastmod>2022-12-08T01:41:17+09:00</lastmod>
+    <loc>https://moo-woong.github.io/tags/algorithm/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/categories/algorithm/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/categories/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/tags/leetcode/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_83_remove_duplicates_from_sorted_list/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/</loc>
-    <lastmod>2022-12-08T01:41:17+09:00</lastmod>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/posts/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/tags/</loc>
+    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_70_climbing_stairs/</loc>
     <lastmod>2022-12-08T01:41:17+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_69_sqrt/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_69_sqrt/</loc>
     <lastmod>2022-12-08T01:07:34+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_67_add_binary/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_67_add_binary/</loc>
     <lastmod>2022-12-08T00:25:33+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_3_longest_substring_without_repeating_characters/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_3_longest_substring_without_repeating_characters/</loc>
     <lastmod>2022-12-05T00:01:19+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_66_plus_one/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_2_add_two_numbers/</loc>
+    <lastmod>2022-12-04T22:19:32+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_66_plus_one/</loc>
     <lastmod>2022-12-04T21:02:51+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_58_length_of_last_word/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_58_length_of_last_word/</loc>
     <lastmod>2022-12-04T20:43:20+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_35_search_insert_position/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_35_search_insert_position/</loc>
     <lastmod>2022-12-04T19:44:43+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_27_remove_element/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_27_remove_element/</loc>
     <lastmod>2022-12-04T19:26:04+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_26_remove_duplicates_from_sorted_array/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_26_remove_duplicates_from_sorted_array/</loc>
     <lastmod>2022-12-04T19:12:59+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_21_merge_two_sorted_lists/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_21_merge_two_sorted_lists/</loc>
     <lastmod>2022-12-01T23:38:10+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_20_valid_parentheses/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_20_valid_parentheses/</loc>
     <lastmod>2022-12-01T23:05:08+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_14_longest_common_prefix/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_14_longest_common_prefix/</loc>
     <lastmod>2022-12-01T22:37:08+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_9_palindrome_number/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_9_palindrome_number/</loc>
     <lastmod>2022-12-01T00:27:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/algo_1_two_some/</loc>
+    <loc>https://moo-woong.github.io/posts/algorithm/algo_1_two_some/</loc>
     <lastmod>2022-11-30T23:23:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/minikube/</loc>
+    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
     <lastmod>2022-11-01T22:54:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/dev_env/minikube/</loc>
+    <lastmod>2022-11-01T22:54:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
+    <lastmod>2022-11-01T22:54:51+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/categories/blog/</loc>
+    <lastmod>2022-10-16T08:15:52-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/tags/github/</loc>
+    <lastmod>2022-10-16T08:15:52-07:00</lastmod>
   </url>
   
   <url>
@@ -93,16 +148,8 @@
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/posts/first_commit/</loc>
-    <lastmod>2022-10-16T07:02:07-07:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/tags/</loc>
+    <loc>https://moo-woong.github.io/tags/hugo/</loc>
+    <lastmod>2022-10-16T08:15:52-07:00</lastmod>
   </url>
   
 </urlset>
