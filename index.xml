@@ -24,6 +24,18 @@ XXX is not in the sudoers file. This incident will be reported. 원인 현재 �
     </item>
     
     <item>
+      <title>VMWare로 Kubernetes 설치하기</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes/</link>
+      <pubDate>Tue, 03 Jan 2023 20:46:06 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes/</guid>
+      <description>VM생성 및 설정 2개 이상의 CPU Core, 2G이상의 메모리를 설정하여 VM을 생성합니다. 저는 용량이 부족해서 Kubernetes의 최소 요구사항인 2CPU, 2GMem으로 진행하였습니다. 앞으로 진행하는 절차들은 모두 모든 노드에 동일하게 진행합니다.
+Guest OS에 SSH 설치 $ sudo apt-get install openssh-server Docker 설치 기본적인 설치는 Docker의 Official Installation Guide를 따릅니다.
+Docker repository 설정 apt 관련 repository 설정
+ $ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release Docker의 공식 GPG Key 추가</description>
+    </item>
+    
+    <item>
       <title>LeetCode 공부 - Remove Duplicates from Sorted List</title>
       <link>https://moo-woong.github.io/posts/algorithm/algo_83_remove_duplicates_from_sorted_list/</link>
       <pubDate>Thu, 08 Dec 2022 23:40:46 +0900</pubDate>

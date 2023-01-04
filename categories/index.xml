@@ -9,22 +9,22 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Dec 2022 23:40:46 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Jan 2023 20:46:06 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes</title>
+      <link>https://moo-woong.github.io/categories/kubernetes/</link>
+      <pubDate>Tue, 03 Jan 2023 20:46:06 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Algorithm</title>
       <link>https://moo-woong.github.io/categories/algorithm/</link>
       <pubDate>Thu, 08 Dec 2022 23:40:46 +0900</pubDate>
       
       <guid>https://moo-woong.github.io/categories/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Kubernetes</title>
-      <link>https://moo-woong.github.io/categories/kubernetes/</link>
-      <pubDate>Tue, 01 Nov 2022 22:54:51 +0900</pubDate>
-      
-      <guid>https://moo-woong.github.io/categories/kubernetes/</guid>
       <description></description>
     </item>
     

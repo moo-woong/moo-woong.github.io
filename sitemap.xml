@@ -33,17 +33,32 @@
   </url>
   
   <url>
+    <loc>https://moo-woong.github.io/categories/</loc>
+    <lastmod>2023-01-03T20:46:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
+    <lastmod>2023-01-03T20:46:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes/</loc>
+    <lastmod>2023-01-03T20:46:06+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
+    <lastmod>2023-01-03T20:46:06+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://moo-woong.github.io/tags/algorithm/</loc>
     <lastmod>2022-12-08T23:40:46+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/categories/algorithm/</loc>
-    <lastmod>2022-12-08T23:40:46+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/categories/</loc>
     <lastmod>2022-12-08T23:40:46+09:00</lastmod>
   </url>
   
@@ -133,17 +148,7 @@
   </url>
   
   <url>
-    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
-    <lastmod>2022-11-01T22:54:51+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://moo-woong.github.io/posts/kubernetes/minikube/</loc>
-    <lastmod>2022-11-01T22:54:51+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/tags/%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD/</loc>
     <lastmod>2022-11-01T22:54:51+09:00</lastmod>
   </url>
   
