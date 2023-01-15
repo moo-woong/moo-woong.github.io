@@ -9,7 +9,46 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 14 Jan 2023 20:22:37 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2023 23:03:34 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Study 2</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</link>
+      <pubDate>Sun, 15 Jan 2023 23:03:34 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</guid>
+      <description>etcd</description>
+    </item>
+    
+    <item>
+      <title>[Kubernetes Study] Cluster Architecture</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/</link>
+      <pubDate>Sun, 15 Jan 2023 20:26:32 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/</guid>
+      <description>Kubernetes Study posts들은 Udemy의 Kubernetes 스테디셀러인 Mumshad의 Certified Kubernetes Administrator (CKA) with Practice Tests 강의를 스터디하며 강의 내용을 체득하기 위해 간략하게 정리하는 포스트입니다. 따라서 관련 내용들은 Udemy 강의 내용이며, 아직 다 학습하지는 못했지만.. 강의 내용이 아주 이해하기 쉽게 잘 설명된것 같으니 할인할 때 구매하시면 좋을것 같습니다. 저는 약 19,000에 구매했던것 같습니다.
+Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실행, 관리하는 플랫폼입니다. Google에서 처음 개발되었으며 오픈소스 기반으로 현재는 Linux foundation 재단에서 관리합니다. AWS, Azure, GCP 등 Public Cloud 업체들은 Kubernetes 환경을 제공하고 있고 규모가 있는 업체들의 경우 On-premise로 Kubernetes를 구축하여 Service를 제공하고 있습니다.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 공부 - Find the Difference</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_389_find_the_difference/</link>
+      <pubDate>Sun, 15 Jan 2023 18:25:02 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_389_find_the_difference/</guid>
+      <description>LeetCode(387) - ind the Difference 문제 문자열 s와 t가 주어진다. 문자열 t는 문자열 s를 셔플링하고, 여기에 문자 하나를 추가한 문자열이다. 주어진 문자열 t에서 추가된 문자를 찾아 반환하라.
+입력 Input: s = &amp;quot;abcd&amp;quot;, t = &amp;quot;abcde&amp;quot; 출력 Output: &amp;quot;e&amp;quot; 풀이 소문자 알파벳만으로 구성된 문자열이므로, 모든 문자의 출현 빈도를 int[26]으로 해결할 수 있다. int[26] 배열을 s, t용으로 각자 하나씩 만들고, 두 배열을 순회하면서 출현 빈도가 다른 하나의 문자를 반환한다. 문자 계산은 삽입 시 c - &#39;a&#39;로 하여 a는 0 번째 index에 추가되도록 하고, 반환할 때는 index + &#39;a&#39;로 계산하여 index를 알파벳으로 변환한 후 반환한다.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 공부 - First Unique Character in a String</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_387_first_unique_character_in_a_string/</link>
+      <pubDate>Sun, 15 Jan 2023 18:01:29 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_387_first_unique_character_in_a_string/</guid>
+      <description>LeetCode(387) - First Unique Character in a String 문제 문자열 s가 주어진다. 문자열s를 구성하는 문자 중, 한번만 등장하는 문자를 찾고, 그 중 가장 낮은 index를 가진 문자의 index를 반환하라.
+입력 Input: s = &amp;quot;loveleetcode&amp;quot; 출력 Output: 2  문자열 loveleetcode 중 중복되지 않은 문자는 v,t,c,o, 그리고 d 이다. 이 중 가장 낮은 index를 갖는 문자는 v이며, index는 2 이므로, 2를 반환한다.  풀이 문자를 key로 갖고, &amp;lt;int,int&amp;gt; 타입의 pair를 value로 갖는 map을 이용한다.</description>
+    </item>
+    
     <item>
       <title>LeetCode 공부 - Ransom Note</title>
       <link>https://moo-woong.github.io/posts/algorithm/algo_383_ransom_note/</link>
@@ -17,7 +56,7 @@
       
       <guid>https://moo-woong.github.io/posts/algorithm/algo_383_ransom_note/</guid>
       <description>LeetCode(383) - Ransom Note 문제 문자열 ransomNote와 magazine 이 주어진다. ransomNote를 이용해 magazine의 일부를 구성할 수 있다면 true를, 아니라면 false를 반환하라.
- 구성에 있어서 순서는 상관이 없다. ransomNote가 aab 이고, magazine이 baa라면, ransomNote의 재배열이 magazine의 일부이므로 true이다.  입력 Input: ransomNote = &amp;quot;aa&amp;quot;, magazine = &amp;quot;aab&amp;quot; 출력 Output: true 풀이 ransomNote를 모두 소비했을 때 magazine의 일부일 경우 true를 반환한다. ransomNote에 있는 문자가 magazine에 있다면 false이다. ransomNote의 문자열을 순회하며 각 문자들을 map에 key로 하고 value는 등장 횟수마다 +1 한다.</description>
+ 구성에 있어서 순서는 상관이 없다. ransomNote가 aab 이고, magazine이 baa라면, ransomNote의 재배열이 magazine의 일부이므로 true이다.  입력 Input: ransomNote = &amp;quot;aa&amp;quot;, magazine = &amp;quot;aab&amp;quot; 출력 Output: true 풀이 ransomNote를 모두 소비했을 때 magazine의 일부일 경우 true를 반환한다. ransomNote에 있는 문자가 magazine에 없다면 false이다. ransomNote의 문자열을 순회하며 각 문자들을 map에 key로 하고 value는 등장 횟수마다 +1 한다.</description>
     </item>
     
     <item>

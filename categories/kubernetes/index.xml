@@ -9,7 +9,26 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Jan 2023 20:46:06 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2023 23:03:34 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Study 2</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</link>
+      <pubDate>Sun, 15 Jan 2023 23:03:34 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</guid>
+      <description>etcd</description>
+    </item>
+    
+    <item>
+      <title>[Kubernetes Study] Cluster Architecture</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/</link>
+      <pubDate>Sun, 15 Jan 2023 20:26:32 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/</guid>
+      <description>Kubernetes Study posts들은 Udemy의 Kubernetes 스테디셀러인 Mumshad의 Certified Kubernetes Administrator (CKA) with Practice Tests 강의를 스터디하며 강의 내용을 체득하기 위해 간략하게 정리하는 포스트입니다. 따라서 관련 내용들은 Udemy 강의 내용이며, 아직 다 학습하지는 못했지만.. 강의 내용이 아주 이해하기 쉽게 잘 설명된것 같으니 할인할 때 구매하시면 좋을것 같습니다. 저는 약 19,000에 구매했던것 같습니다.
+Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실행, 관리하는 플랫폼입니다. Google에서 처음 개발되었으며 오픈소스 기반으로 현재는 Linux foundation 재단에서 관리합니다. AWS, Azure, GCP 등 Public Cloud 업체들은 Kubernetes 환경을 제공하고 있고 규모가 있는 업체들의 경우 On-premise로 Kubernetes를 구축하여 Service를 제공하고 있습니다.</description>
+    </item>
+    
     <item>
       <title>VMWare로 Kubernetes 설치하기</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes/</link>
