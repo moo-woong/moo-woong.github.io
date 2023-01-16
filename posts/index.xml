@@ -9,14 +9,26 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Jan 2023 23:03:34 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Jan 2023 22:50:26 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Kubernetes Study 2</title>
+      <title>[Kubernetes Study] k8s components - kube-apiserver</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/</link>
+      <pubDate>Mon, 16 Jan 2023 22:50:26 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/</guid>
+      <description>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
+운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다.</description>
+    </item>
+    
+    <item>
+      <title>[Kubernetes Study] k8s components - ETCD</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</link>
       <pubDate>Sun, 15 Jan 2023 23:03:34 +0900</pubDate>
       
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</guid>
-      <description>etcd</description>
+      <description>etcd? etcd는 key-value 분산 저장소입니다. 오픈소스이며, Kubernetes에서 사용되어 유명해진 데이터베이스입니다. 분산 저장소라는 말에서 알 수 있듯이 ETCD는 Replication State Machine이며, 분산 컴퓨팅 환경에서 High Availability를 제공하고 높은 신뢰성을 제공합니다. Kubernetes의 다양한 정보들이 ETCD를 통해 저장되므로 고가용성이 중요합니다.
+Key-value store? 전통적으로 데이터베이스는 행과 열로 이루어진 Tabular Format 구성됩니다. 관계형 데이터베이스 SQL이 대표적입니다. key-value store는 NoSQL 데이터베이스의 한 종류이며,
+Key-value store 구조   위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다.</description>
     </item>
     
     <item>

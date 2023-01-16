@@ -3,37 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/</loc>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://moo-woong.github.io/categories/</loc>
-    <lastmod>2023-01-15T23:03:34+09:00</lastmod>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
-    <lastmod>2023-01-15T23:03:34+09:00</lastmod>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/series/kubernetes-study/</loc>
-    <lastmod>2023-01-15T23:03:34+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</loc>
-    <lastmod>2023-01-15T23:03:34+09:00</lastmod>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/</loc>
-    <lastmod>2023-01-15T23:03:34+09:00</lastmod>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/posts/</loc>
-    <lastmod>2023-01-15T23:03:34+09:00</lastmod>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/series/</loc>
+    <lastmod>2023-01-16T22:50:26+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</loc>
     <lastmod>2023-01-15T23:03:34+09:00</lastmod>
   </url>
   
