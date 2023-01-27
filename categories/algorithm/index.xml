@@ -9,7 +9,27 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 23 Jan 2023 00:27:27 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 Jan 2023 23:37:58 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 공부 - Longest Harmonious Subsequence</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_594/</link>
+      <pubDate>Fri, 27 Jan 2023 23:37:58 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_594/</guid>
+      <description>LeetCode(594) - Longest Harmonious Subsequence 문제 임의의 harmonious array를 정의한다.  harmonious array는 배열의 양 끝단의 수가 그 사이의 수보다 1이 더 큰 배열을 말한다. 배열 nums가 주어질 때, 해당 배열을가지고 가장 긴 harmonious array를 만들었을 때 자리수를 반환하라.
+입력 Input: nums = [1,3,2,2,5,2,3,7] 출력 Output: 5  배열 1,3,2,2,5,2,3,7를 이용하여 harmonious array 3,2,2,2,3을 만들 수 있으므로 5를 반환한다.  풀이 map을 이용하여 각 숫자의 출현 횟수를 카운트 한다. map의 첫 번째 pair를 가르키는 prev변수를 생성하고 map을 순회한다.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 공부 - Distribute Candies</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_575_distribute_candy/</link>
+      <pubDate>Wed, 25 Jan 2023 00:29:52 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_575_distribute_candy/</guid>
+      <description>LeetCode(575) - Distribute Candy 문제 Alice는 n개의 캔디를 가지고 있다. i 캔디는 candyTpye[i]의 타입이다. Alice는 살이쪄서 캔디를 줄여야한다..! 주치의는 Alice가 가지고 있는 캔디의 n/2만큼만 먹으라고 한다.
+Alice는 최선의 선택을 하고싶다. n/2만큼을 먹어야한다면, 가능한한 많은 종류의 캔디를 먹고싶다. 만약 6종류의 캔디가 있다면, 3종류의 캔디를 먹고, 3종류의 캔디 총 6개가 있다면 있다면 n/2를 한 만큼인 3개만을 먹되, 3종류의 캔디를 먹고싶다. 캔디의 종류를 나타내는 candyType이 주어질 때, Alice가 먹을 수 있는 캔디의 최대 개수를 반환하라.</description>
+    </item>
+    
     <item>
       <title>LeetCode 공부 - Keyboard Row</title>
       <link>https://moo-woong.github.io/posts/algorithm/algo_500_keyboard_row/</link>
