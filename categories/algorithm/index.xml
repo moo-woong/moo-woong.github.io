@@ -9,7 +9,27 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 27 Jan 2023 23:37:58 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Jan 2023 16:05:59 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LeetCode 공부 - Distribute Candies</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_645/</link>
+      <pubDate>Sun, 29 Jan 2023 16:05:59 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_645/</guid>
+      <description>LeetCode(645) - Set Mismatch 문제 정수형 set이 배열형태로 주어진다. set은 1부터 set의 크기인 n까지 중복되지 않은 값으로 채워져 있어야 한다. nums에 하나의 정수가 다른 정수(1 &amp;lt;= 다른정수&amp;gt; &amp;lt;= n)로 바뀌었다. 이 중복된 수와 원래 있어야 할 수를 찾아 배열 형태로 반환하라.
+입력 Input: nums = [1,2,2,4] 출력 class Solution { public: vector&amp;lt;int&amp;gt; findErrorNums(vector&amp;lt;int&amp;gt;&amp;amp; nums) { unordered_map&amp;lt;int, int&amp;gt; mp; int ret1 =0; int ret2 =0; sort(nums.begin(), nums.end()); for (int i = 0; i &amp;lt; nums.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode 공부 - Distribute Candies</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_599/</link>
+      <pubDate>Sun, 29 Jan 2023 15:28:59 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_599/</guid>
+      <description>LeetCode(599) - Minimum Index Sum of Two Lists 문제 문자열 배열 list1과 list2가 주어진다. 다음과 같은 조건을 갖는 문자열들을 반환하라.
+ list1, list2모두에 존재하는 문자열 문자열 중, 가장 낮은 인덱스를 갖는 문자열 가장 낮은 index가 양쪽 배열 모두 동일하다면 두 문자열을 배열 형태로 반환.  입력 list1 = [&amp;quot;Shogun&amp;quot;,&amp;quot;Tapioca Express&amp;quot;,&amp;quot;Burger King&amp;quot;,&amp;quot;KFC&amp;quot;], list2 = [&amp;quot;Piatti&amp;quot;,&amp;quot;The Grill at Torrey Pines&amp;quot;,&amp;quot;Hungry Hunter Steakhouse&amp;quot;,&amp;quot;Shogun&amp;quot; 출력 Output: [&amp;quot;Shogun&amp;quot;] 풀이 문자열을 key로, index를 value로 하는 map에 list1의 문자열들을 삽입한다.</description>
+    </item>
+    
     <item>
       <title>LeetCode 공부 - Longest Harmonious Subsequence</title>
       <link>https://moo-woong.github.io/posts/algorithm/algo_594/</link>
@@ -41,12 +61,23 @@ Alice는 최선의 선택을 하고싶다. n/2만큼을 먹어야한다면, 가�
     </item>
     
     <item>
+      <title>LeetCode 공부 - Longest Palindrome</title>
+      <link>https://moo-woong.github.io/posts/algorithm/algo_409_longest_palindrome/</link>
+      <pubDate>Mon, 16 Jan 2023 23:54:27 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/algorithm/algo_409_longest_palindrome/</guid>
+      <description>LeetCode(409) - Longest Palindrome 문제 문자열 s가 주어진다. 문자열 s의 문자들을 재조합하여 Palidrome을 만들 때 가장 긴 Palidrome의 길이를 반환하라.
+입력 Input: s = &amp;quot;abccccdd&amp;quot; 출력 Output: 7 문자열 abccccdd를 재조합해서 가장 큰 길이의 Palidrome을 만들면 dccaccd이므로, 해당 길이인 7을 반환한다.
+풀이 unordered_map으로 각 문자들의 출현빈도를 카운팅하고, 짝수 수를 구해 Palidrome을 계산한다. 라고 0. 처럼 생각했는데 짝수를 카운팅 후 Palidrome의 길이를 계산하는 방법을 몰라서 Solution을 보고 같이 map을 써서 본 풀이를 적는다(even이면 전체사이즈를, odd가 1 초과일때 +1 해주면 되는거였다).</description>
+    </item>
+    
+    <item>
       <title>LeetCode 공부 - Find the Difference</title>
       <link>https://moo-woong.github.io/posts/algorithm/algo_389_find_the_difference/</link>
       <pubDate>Sun, 15 Jan 2023 18:25:02 +0900</pubDate>
       
       <guid>https://moo-woong.github.io/posts/algorithm/algo_389_find_the_difference/</guid>
-      <description>LeetCode(387) - ind the Difference 문제 문자열 s와 t가 주어진다. 문자열 t는 문자열 s를 셔플링하고, 여기에 문자 하나를 추가한 문자열이다. 주어진 문자열 t에서 추가된 문자를 찾아 반환하라.
+      <description>LeetCode(387) - Find the Difference 문제 문자열 s와 t가 주어진다. 문자열 t는 문자열 s를 셔플링하고, 여기에 문자 하나를 추가한 문자열이다. 주어진 문자열 t에서 추가된 문자를 찾아 반환하라.
 입력 Input: s = &amp;quot;abcd&amp;quot;, t = &amp;quot;abcde&amp;quot; 출력 Output: &amp;quot;e&amp;quot; 풀이 소문자 알파벳만으로 구성된 문자열이므로, 모든 문자의 출현 빈도를 int[26]으로 해결할 수 있다. int[26] 배열을 s, t용으로 각자 하나씩 만들고, 두 배열을 순회하면서 출현 빈도가 다른 하나의 문자를 반환한다. 문자 계산은 삽입 시 c - &#39;a&#39;로 하여 a는 0 번째 index에 추가되도록 하고, 반환할 때는 index + &#39;a&#39;로 계산하여 index를 알파벳으로 변환한 후 반환한다.</description>
     </item>
     
