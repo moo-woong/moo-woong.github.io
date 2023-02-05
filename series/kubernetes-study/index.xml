@@ -23,6 +23,18 @@
     </item>
     
     <item>
+      <title>[Kubernetes Study] k8s objects - Recap</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/</link>
+      <pubDate>Sun, 29 Jan 2023 17:00:14 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/</guid>
+      <description>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
+가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
+ A Single cluster A Single node A single Pod A single instance in a Pod    사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
+그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다.</description>
+    </item>
+    
+    <item>
       <title>[Kubernetes Study] k8s components - kube-proxy</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/</link>
       <pubDate>Tue, 24 Jan 2023 22:39:01 +0900</pubDate>
