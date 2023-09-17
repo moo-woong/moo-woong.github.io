@@ -3,17 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://moo-woong.github.io/categories/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/series/kubernetes-study/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/posts/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://moo-woong.github.io/series/</loc>
+    <lastmod>2023-09-10T15:17:57+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://moo-woong.github.io/tags/algorithm/</loc>
     <lastmod>2023-02-05T15:52:48+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://moo-woong.github.io/categories/algorithm/</loc>
-    <lastmod>2023-02-05T15:52:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/categories/</loc>
     <lastmod>2023-02-05T15:52:48+09:00</lastmod>
   </url>
   
@@ -29,16 +59,6 @@
   
   <url>
     <loc>https://moo-woong.github.io/tags/map/</loc>
-    <lastmod>2023-02-05T15:52:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/</loc>
-    <lastmod>2023-02-05T15:52:48+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/posts/</loc>
     <lastmod>2023-02-05T15:52:48+09:00</lastmod>
   </url>
   
@@ -69,21 +89,6 @@
   
   <url>
     <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/</loc>
-    <lastmod>2023-01-29T17:00:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
-    <lastmod>2023-01-29T17:00:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/series/kubernetes-study/</loc>
-    <lastmod>2023-01-29T17:00:14+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://moo-woong.github.io/series/</loc>
     <lastmod>2023-01-29T17:00:14+09:00</lastmod>
   </url>
   
