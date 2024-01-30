@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Moo-woong</title>
     <link>https://moo-woong.github.io/posts/</link>
     <description>Recent content in Posts on Moo-woong</description>
-    <image>
-      <url>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
-    </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 Sep 2023 15:17:57 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Jan 2024 18:15:02 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Study 12 Test</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-test/</link>
+      <pubDate>Tue, 30 Jan 2024 18:15:02 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes Study 11 Taints Tolerations</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/</link>
+      <pubDate>Tue, 30 Jan 2024 00:00:26 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/</guid>
+      <description>Taints and Tolerations </description>
+    </item>
+    
+    <item>
+      <title>[Kubernetes Study] Labelselector</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/</link>
+      <pubDate>Mon, 29 Jan 2024 23:42:35 +0900</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/</guid>
+      <description>Label selector kubectl의 --seletor 옵션을 이용해서 필터링을 직접 가능하다
+apiVersion:v1kind:Podmetadata:name:simple-webapplabels:app:App1function:Front-end......spec:containers:- name:simple-webappimage:siple-webappports:- containerPort:8080kubectl get pods --selector app=App1 Label은 ReplicaSet, Pod, Service 등 다른 객체들 간의 연결에도 사용할 수 있다. 다음의 ReplicaSet의 예제다.
+apiVersion:v1kind:ReplicaSetmetadata:name:simple-webapplabels:app:App1function:Front-endspec:replicas:3selector:matchLabels:app:App1template:metadata:labels:app:App1function:Front-endspec:containers:- name:simple-webappimage:simple-webappmetadata.labels는 ReplicaSet에 할당되는 Label이다. spec.selector.matchLabels는 ReplicaSet과 매치되는 Pod를 지정한다. 위 yaml파일이 실행되면, ReplicaSet과 Pod가 연결된다.
+ReplicaSet과 Pod를 연결한 것과 같이 Service와 Pod를 연결할 수도 있다.
+apiVersion:v1kind:Servicemetadata:name:my-servicespec:selector:app:App1ports:- protocol:TCPport:80targetPort 9376위처럼 spec.selector를 이용해 Service와 연결된 Pod를 특정할 수 있다.
+Annotations annotation은 객체에 추가적인 정보를 입력할 때 사용된다.</description>
+    </item>
+    
     <item>
       <title>Kubernetes Raspberry Pi</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/</link>
@@ -49,7 +77,7 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       
       <guid>https://moo-woong.github.io/posts/algorithm/algo_653/</guid>
       <description>LeetCode(653) - Two Sum IV - Input is a BST 문제 Binary Search Tree의 root node 와 정수 k가 주어진다. BST정수 중 두 정수를 조합하여 k를 만들 수 있다면 true를, 아니라면 false를 반환하라.
-  입력 Input: root = [5,3,6,2,4,null,7], k = 9 출력 Output: true 풀이 set은 key의 유일성을 보장하며, 고유한 key 검색 시 O(1)의 시간복잡도를 가진다. k - 특정 노드 값이면, 나머지 값에 대해 검색연산을 수행하여 값을 찾을 수 있다.</description>
+ 입력 Input: root = [5,3,6,2,4,null,7], k = 9 출력 Output: true 풀이 set은 key의 유일성을 보장하며, 고유한 key 검색 시 O(1)의 시간복잡도를 가진다. k - 특정 노드 값이면, 나머지 값에 대해 검색연산을 수행하여 값을 찾을 수 있다.</description>
     </item>
     
     <item>
@@ -60,7 +88,7 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-8-pod/</guid>
       <description>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
 가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
- A Single cluster A Single node A single Pod A single instance in a Pod    사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
+ A Single cluster A Single node A single Pod A single instance in a Pod   사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
 그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다.</description>
     </item>
     
@@ -72,7 +100,7 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/</guid>
       <description>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
 가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
- A Single cluster A Single node A single Pod A single instance in a Pod    사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
+ A Single cluster A Single node A single Pod A single instance in a Pod   사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
 그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다.</description>
     </item>
     
@@ -123,8 +151,8 @@ Alice는 최선의 선택을 하고싶다. n/2만큼을 먹어야한다면, 가�
       
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/</guid>
       <description>kube-proxy? Kubernetes cluster내에서는 같은 네임스페이스에 있는 각 Pod들은 다른 Pod들과 통신이 가능합니다. 설령 다른 워커노드에 설치된 Pod들도 마찬가지로 통신이 가능합니다. 이러한 통신을 위해서 내부 가상 네트워크인 Pod 네트워크가 필요합니다.
-  저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
-  Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다.</description>
+ 저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
+ Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다.</description>
     </item>
     
     <item>
@@ -135,7 +163,7 @@ Alice는 최선의 선택을 하고싶다. n/2만큼을 먹어야한다면, 가�
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-6/</guid>
       <description>kubelet? 앞선 포스팅에서 언급된것 처럼 kubelet은 Cluster를 구성하는 모든 워커노드에 설치됩니다. 이후 Pod배치, Pod상태 조회 요청 등 kube-apiserver의 요구를 받아 Pod의 설치, 삭제, 조회 등 실제적인 작업을 워커노드에서 수행합니다.
 Pod의 설치가 요청되면
- kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다.    kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다.</description>
+ kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다.   kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다.</description>
     </item>
     
     <item>
@@ -157,7 +185,7 @@ Cluster에는 수 각 Node에 배치될 수 많은 Pod가 있고, Worker node로
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4/</guid>
       <description>kube-controller-manager? kube-controller-manager의 역할은 Kubernetes를 구성하하는 다양한 컨트롤러들을 관리하는 것입니다. 컨트롤러들은 운용자로부터 주어진 상태(desired state)를 만족시키기 위해 다음과 같은 역할을 합니다.
  상태 모니터링 상태에 따른 상태 해결(교정)  node-controller는 Cluster를 구성하는 노드들의 상태를 모니터링 합니다. 모니터링은 kube-apiserver를 통해 수행하며 매 5초 마다 상태관리를 수행합니다. 또한 노드의 이상이 감지될 시 40초간의 Grace period를 두어, 40초 이후에도 health check이 실패할 경우 NotReady Status를 만들어 해당 노드로 스케쥴링이 되지 않도록 합니다.
-  repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링하고 관리합니다.</description>
+ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링하고 관리합니다.</description>
     </item>
     
     <item>
@@ -167,7 +195,7 @@ Cluster에는 수 각 Node에 배치될 수 많은 Pod가 있고, Worker node로
       
       <guid>https://moo-woong.github.io/posts/algorithm/algo_500_keyboard_row/</guid>
       <description>LeetCode(500) - Keyboard Row 문제 string 문자열들의 배열인 words가 주어진다. 일반적인 키보드 배열은 알파벳을 세 줄로 나눌 수 있다. qqwertyuiop가 가장 첫 번째 줄, asdfghjkl가 두 번째 줄 마지막으로 zxcvbnm가 세 번재 줄이다. words를 구성하는 word가, 키보드를 구성하는 세 줄 중 하나의 라인에서 다 완성이 된다면 배열에 삽입하여 해당 배열을 반환하라.
-  입력 Input: words = [&amp;quot;Hello&amp;quot;,&amp;quot;Alaska&amp;quot;,&amp;quot;Dad&amp;quot;,&amp;quot;Peace&amp;quot;] 출력 Output: [&amp;quot;Alaska&amp;quot;,&amp;quot;Dad&amp;quot;] 풀이 키보드 배치를 세군데로 나누고, 세 개의 unordered_set을 만들어서 미리 저장한다.</description>
+ 입력 Input: words = [&amp;quot;Hello&amp;quot;,&amp;quot;Alaska&amp;quot;,&amp;quot;Dad&amp;quot;,&amp;quot;Peace&amp;quot;] 출력 Output: [&amp;quot;Alaska&amp;quot;,&amp;quot;Dad&amp;quot;] 풀이 키보드 배치를 세군데로 나누고, 세 개의 unordered_set을 만들어서 미리 저장한다.</description>
     </item>
     
     <item>
@@ -199,7 +227,7 @@ Cluster에는 수 각 Node에 배치될 수 많은 Pod가 있고, Worker node로
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</guid>
       <description>etcd? etcd는 key-value 분산 저장소입니다. 오픈소스이며, Kubernetes에서 사용되어 유명해진 데이터베이스입니다. 분산 저장소라는 말에서 알 수 있듯이 ETCD는 Replication State Machine이며, 분산 컴퓨팅 환경에서 High Availability를 제공하고 높은 신뢰성을 제공합니다. Kubernetes의 다양한 정보들이 ETCD를 통해 저장되므로 고가용성이 중요합니다.
 Key-value store? 전통적으로 데이터베이스는 행과 열로 이루어진 Tabular Format 구성됩니다. 관계형 데이터베이스 SQL이 대표적입니다. key-value store는 NoSQL 데이터베이스의 한 종류이며,
-Key-value store 구조   위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다.</description>
+Key-value store 구조  위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다.</description>
     </item>
     
     <item>
@@ -332,7 +360,7 @@ Constraints: n == nums.length 1 &amp;lt;= n &amp;lt;= 104 0 &amp;lt;= nums[i] &a
       
       <guid>https://moo-woong.github.io/posts/algorithm/algo_100_same_tree/</guid>
       <description>LeetCode(100) - Same Tree 문제 Binary Tree 두 개가 주어진다. 두 Binary Tree가 같은지 비교하여 같다면 True를, 다르다면 False를 반환한다.
-입력 root = [1,null,2,3]   출력 [1,3,2] 풀이  주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다.</description>
+입력 root = [1,null,2,3]  출력 [1,3,2] 풀이  주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다.</description>
     </item>
     
     <item>
@@ -342,7 +370,7 @@ Constraints: n == nums.length 1 &amp;lt;= n &amp;lt;= 104 0 &amp;lt;= nums[i] &a
       
       <guid>https://moo-woong.github.io/posts/algorithm/algo_94_binary_tree_inorder_traversal/</guid>
       <description>LeetCode(94) - Binary Tree Inorder Traversal 문제 Binary Tree의 root가 주어진다. Inorder Traversal(중위순회)를 한 결과를 반환하라.
-입력 root = [1,null,2,3]   출력 [1,3,2] 풀이  주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다.</description>
+입력 root = [1,null,2,3]  출력 [1,3,2] 풀이  주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다.</description>
     </item>
     
     <item>
