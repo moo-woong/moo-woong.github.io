@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-test/</loc>
+    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-daemonset/</loc>
+    <lastmod>2024-01-30T18:29:02+09:00</lastmod>
+  </url><url>
+    <loc>https://moo-woong.github.io/categories/</loc>
+    <lastmod>2024-01-30T18:29:02+09:00</lastmod>
+  </url><url>
+    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
+    <lastmod>2024-01-30T18:29:02+09:00</lastmod>
+  </url><url>
+    <loc>https://moo-woong.github.io/series/kubernetes-study/</loc>
     <lastmod>2024-01-30T18:29:02+09:00</lastmod>
   </url><url>
     <loc>https://moo-woong.github.io/</loc>
@@ -11,22 +20,13 @@
     <loc>https://moo-woong.github.io/posts/</loc>
     <lastmod>2024-01-30T18:29:02+09:00</lastmod>
   </url><url>
-    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-test/</loc>
+    <loc>https://moo-woong.github.io/series/</loc>
+    <lastmod>2024-01-30T18:29:02+09:00</lastmod>
+  </url><url>
+    <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/</loc>
     <lastmod>2024-01-30T18:15:02+09:00</lastmod>
   </url><url>
-    <loc>https://moo-woong.github.io/categories/</loc>
-    <lastmod>2024-01-30T00:00:26+09:00</lastmod>
-  </url><url>
-    <loc>https://moo-woong.github.io/categories/kubernetes/</loc>
-    <lastmod>2024-01-30T00:00:26+09:00</lastmod>
-  </url><url>
-    <loc>https://moo-woong.github.io/series/kubernetes-study/</loc>
-    <lastmod>2024-01-30T00:00:26+09:00</lastmod>
-  </url><url>
     <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/</loc>
-    <lastmod>2024-01-30T00:00:26+09:00</lastmod>
-  </url><url>
-    <loc>https://moo-woong.github.io/series/</loc>
     <lastmod>2024-01-30T00:00:26+09:00</lastmod>
   </url><url>
     <loc>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/</loc>

@@ -69,6 +69,31 @@ Kubernetes
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] k8s components - kube-controller-manager
+</h2>
+</header>
+<div class=entry-content>
+<p>kube-controller-manager? kube-controller-manager의 역할은 Kubernetes를 구성하하는 다양한 컨트롤러들을 관리하는 것입니다. 컨트롤러들은 운용자로부터 주어진 상태(desired state)를 만족시키기 위해 다음과 같은 역할을 합니다.
+상태 모니터링 상태에 따른 상태 해결(교정) node-controller는 Cluster를 구성하는 노드들의 상태를 모니터링 합니다. 모니터링은 kube-apiserver를 통해 수행하며 매 5초 마다 상태관리를 수행합니다. 또한 노드의 이상이 감지될 시 40초간의 Grace period를 두어, 40초 이후에도 health check이 실패할 경우 NotReady Status를 만들어 해당 노드로 스케쥴링이 되지 않도록 합니다.
+repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링하고 관리합니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-24 17:16:42 +0900 KST">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-controller-manager" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>[Kubernetes Study] k8s components - kube-apiserver
+</h2>
+</header>
+<div class=entry-content>
+<p>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
+운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 KST">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - ETCD
 </h2>
 </header>
@@ -106,22 +131,12 @@ $ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ 
 <footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 KST">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to VMWare로 Kubernetes 설치하기" href=https://moo-woong.github.io/posts/kubernetes/kubernetes/></a>
 </article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>Ubuntu에 Minikube 설치하기
-</h2>
-</header>
-<div class=entry-content>
-<p>Minikube 설치 Kubernetes 학습을 위해서 환경이 필요하게 되었습니다. 개인 학습을 위해서는 Vanilla k8s, Amazon EKS, 그리고 Minikube 등 다양한 학습환경이 있습니다. 저는 Minikube로 선택했습니다. 이유는 다음과 같습니다.
-Vanilla k8s는 환경설정에 많은 리소스도 필요하고 회사에서 proxy환경에서 설치하는데 애를 많이 먹은 기억이 있어서 환경설정에 많은 시간을 할애하기 싫었습니다. Amazon EKS는 간단하게 구축이 가능하지만 약간의 비용이 발생할 수 있다는 점, 그리고 지지고 볶고 뜯고 맛보고 즐겨야하는데 EKS에서는 잘 할 수 있을까?에 대한 의구심이 있어 Amazon EKS 사용은 나중으로 미뤘습니다....</p>
-</div>
-<footer class=entry-footer><span title="2022-11-01 22:54:51 +0900 KST">November 1, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;528 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Ubuntu에 Minikube 설치하기" href=https://moo-woong.github.io/posts/kubernetes/minikube/></a>
-</article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=prev href=https://moo-woong.github.io/categories/kubernetes/page/2/>
 «&nbsp;Prev&nbsp;
+</a>
+<a class=next href=https://moo-woong.github.io/categories/kubernetes/page/4/>Next&nbsp;&nbsp;»
 </a>
 </nav>
 </footer>

@@ -82,29 +82,33 @@ Welcome to my blog
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Kubernetes Study 13 Test
+<h2>[Kubernetes Study] DaemonSets
 </h2>
 </header>
 <div class=entry-content>
-<p>Test </p>
+<p>DaemonSet DaemonSet는 Deployment와 유사한 object로 여러 여러 pod들의 집합이다. 하지만 가장 큰 차이는 Pod instance는 노드 별 하나만 설치된다는 점이다. 이는 새로운 노드가 클러스터에 추가되는 것도 포함하며, 신규 노드가 join 시 Daemon Sets는 해당 Pod를 노드에 추가한다.
+위와 같은 특징으로 Daemon Sets는 각 노드별로 배치되어야 하는 기능에 사용 가능하다. 예를 들면 노드 별 네트워크 I/O를 모니터링 하는 agent들을 배치할 수 있다. 이처럼 노드 별 agent가 필요로 하는 서비스를 배치한다면 centralized service에서는 노드의 추가, 삭제등의 동작을 DaemonSet에 일임할 수 있다....</p>
 </div>
-<footer class=entry-footer><span title="2024-01-30 18:29:02 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;word&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Study 13 Test" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-test/></a>
+<footer class=entry-footer><span title="2024-01-30 18:29:02 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;88 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] DaemonSets" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-daemonset/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Kubernetes Study 12 Test
+<h2>[Kubernetes Study] Resource requirements and limits
 </h2>
 </header>
 <div class=entry-content>
-<p></p>
+<p>Resource requirements and limits 각 노드는 CPU와 Memory 리소스를 갖고 있다. 스케쥴러에 이해 Pod가 배치될 때, Pod의 리소스 요청 사항과 노드의 리소스 사용량은 스케쥴링에 직접적인 영향을 미친다.
+Requests 사용법 다음과 같이 spec.containers.resources.requests 를 이용해 Pod에 리소스 정보를 명세할 수 있다.
+apiVersion:v1kind:Podmetadata:name:simple-webapp-colorlabels:name:simple-webapp-colorspec:containers:- name:simple-webapp-colorimage:simple-webapp-colorports:- containerPort:8080resources:requests:memory:"4Gi"cpu:2단위 CPU CPU의 단위는 정수, 소수점, m 을 이용해서 설정할 수 있다. m은 milli의 뜻으로 1/1000이라서 cpu 0.1은 100m과 동일하며, 1은 1000m과 동일하다.
+CPU의 최소 단위는 1m이며 그 이하는 될 수 없다....</p>
 </div>
-<footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;0 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Study 12 Test" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-test/></a>
+<footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Resource requirements and limits" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Kubernetes Study 11 Taints Tolerations
+<h2>[Kubernetes Study] Taints Tolerations
 </h2>
 </header>
 <div class=entry-content>
@@ -114,7 +118,7 @@ Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 
 클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자....</p>
 </div>
 <footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Study 11 Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
