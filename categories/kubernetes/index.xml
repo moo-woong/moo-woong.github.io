@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Kubernetes on Moo-woong</title>
     <link>https://moo-woong.github.io/categories/kubernetes/</link>
     <description>Recent content in Kubernetes on Moo-woong</description>
+    <image>
+      <url>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 29 Jan 2024 23:42:35 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/categories/kubernetes/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -40,7 +44,7 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-8-pod/</guid>
       <description>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
 가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
- A Single cluster A Single node A single Pod A single instance in a Pod   사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
+ A Single cluster A Single node A single Pod A single instance in a Pod    사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
 그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다.</description>
     </item>
     
@@ -52,7 +56,7 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/</guid>
       <description>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
 가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
- A Single cluster A Single node A single Pod A single instance in a Pod   사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
+ A Single cluster A Single node A single Pod A single instance in a Pod    사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
 그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다.</description>
     </item>
     
@@ -63,8 +67,8 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/</guid>
       <description>kube-proxy? Kubernetes cluster내에서는 같은 네임스페이스에 있는 각 Pod들은 다른 Pod들과 통신이 가능합니다. 설령 다른 워커노드에 설치된 Pod들도 마찬가지로 통신이 가능합니다. 이러한 통신을 위해서 내부 가상 네트워크인 Pod 네트워크가 필요합니다.
- 저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
- Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다.</description>
+  저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
+  Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다.</description>
     </item>
     
     <item>
@@ -75,7 +79,7 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-6/</guid>
       <description>kubelet? 앞선 포스팅에서 언급된것 처럼 kubelet은 Cluster를 구성하는 모든 워커노드에 설치됩니다. 이후 Pod배치, Pod상태 조회 요청 등 kube-apiserver의 요구를 받아 Pod의 설치, 삭제, 조회 등 실제적인 작업을 워커노드에서 수행합니다.
 Pod의 설치가 요청되면
- kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다.   kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다.</description>
+ kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다.    kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다.</description>
     </item>
     
     <item>
@@ -97,7 +101,7 @@ Cluster에는 수 각 Node에 배치될 수 많은 Pod가 있고, Worker node로
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4/</guid>
       <description>kube-controller-manager? kube-controller-manager의 역할은 Kubernetes를 구성하하는 다양한 컨트롤러들을 관리하는 것입니다. 컨트롤러들은 운용자로부터 주어진 상태(desired state)를 만족시키기 위해 다음과 같은 역할을 합니다.
  상태 모니터링 상태에 따른 상태 해결(교정)  node-controller는 Cluster를 구성하는 노드들의 상태를 모니터링 합니다. 모니터링은 kube-apiserver를 통해 수행하며 매 5초 마다 상태관리를 수행합니다. 또한 노드의 이상이 감지될 시 40초간의 Grace period를 두어, 40초 이후에도 health check이 실패할 경우 NotReady Status를 만들어 해당 노드로 스케쥴링이 되지 않도록 합니다.
- repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링하고 관리합니다.</description>
+  repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링하고 관리합니다.</description>
     </item>
     
     <item>
@@ -118,7 +122,7 @@ Cluster에는 수 각 Node에 배치될 수 많은 Pod가 있고, Worker node로
       <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/</guid>
       <description>etcd? etcd는 key-value 분산 저장소입니다. 오픈소스이며, Kubernetes에서 사용되어 유명해진 데이터베이스입니다. 분산 저장소라는 말에서 알 수 있듯이 ETCD는 Replication State Machine이며, 분산 컴퓨팅 환경에서 High Availability를 제공하고 높은 신뢰성을 제공합니다. Kubernetes의 다양한 정보들이 ETCD를 통해 저장되므로 고가용성이 중요합니다.
 Key-value store? 전통적으로 데이터베이스는 행과 열로 이루어진 Tabular Format 구성됩니다. 관계형 데이터베이스 SQL이 대표적입니다. key-value store는 NoSQL 데이터베이스의 한 종류이며,
-Key-value store 구조  위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다.</description>
+Key-value store 구조   위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다.</description>
     </item>
     
     <item>
