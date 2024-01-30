@@ -5,7 +5,10 @@
 <meta name=robots content="index, follow">
 <title>Kubernetes Study 11 Taints Tolerations | Moo-woong</title>
 <meta name=keywords content>
-<meta name=description content="Taints and Tolerations ">
+<meta name=description content="Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
+Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
+예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
+클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자.">
 <meta name=author content="Me">
 <link rel=canonical href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/>
 <meta name=google-site-verification content="XYZabc">
@@ -25,17 +28,24 @@
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-123-45','auto'),ga('send','pageview'))</script><meta property="og:title" content="Kubernetes Study 11 Taints Tolerations">
-<meta property="og:description" content="Taints and Tolerations ">
+<meta property="og:description" content="Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
+Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
+예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
+클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/"><meta property="og:image" content="https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2024-01-30T00:00:26+09:00">
 <meta property="article:modified_time" content="2024-01-30T00:00:26+09:00"><meta property="og:site_name" content="Moo-woong's diary">
+<meta property="og:see_also" content="https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/"><meta property="og:see_also" content="https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/"><meta property="og:see_also" content="https://moo-woong.github.io/posts/kubernetes/kubernetes-study-8-pod/"><meta property="og:see_also" content="https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/"><meta property="og:see_also" content="https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
 <meta name=twitter:title content="Kubernetes Study 11 Taints Tolerations">
-<meta name=twitter:description content="Taints and Tolerations ">
+<meta name=twitter:description content="Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
+Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
+예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
+클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://moo-woong.github.io/posts/"},{"@type":"ListItem","position":3,"name":"Kubernetes Study 11 Taints Tolerations","item":"https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kubernetes Study 11 Taints Tolerations","name":"Kubernetes Study 11 Taints Tolerations","description":"Taints and Tolerations ","keywords":[],"articleBody":"Taints and Tolerations ","wordCount":"3","inLanguage":"en","datePublished":"2024-01-30T00:00:26+09:00","dateModified":"2024-01-30T00:00:26+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/"},"publisher":{"@type":"Organization","name":"Moo-woong","logo":{"@type":"ImageObject","url":"https://moo-woong.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Kubernetes Study 11 Taints Tolerations","name":"Kubernetes Study 11 Taints Tolerations","description":"Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.\nTaint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.\n예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.\n클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자.","keywords":[],"articleBody":"Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.\nTaint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.\n예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.\n클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자. 배치되는 Pod가 특정 목적용 Pod가 아니라면, A노드를 Taint(오염) 시켜, Pod가 배치되는 것을 막을 수 있다.\n특수목적 용 Pod에는 Tolerations를 적용하여 Taint된 노드에 배치될 수 있도록 만들면 해당 Pod를 A노드에 배치될 수 있다.\n사용법 Taint kubectl taint를 이용해 직접 노드에 taint를 적용할 수 있다. 적용하는 taint는 key=value 쌍이다.\nkubectl taint nodes node-name key=value:taint-effect key=value 쌍 다음에는taint-effect를 입력한다. taint-effect는 tolerations가 맞지 않은 Pod에 대해 노드가 어떤 일을 수행하지 설정하는 것이다. taint-effect는 다음 세 가지 행동이 있다.\n NoSchedule: 스케쥴러는 taint 노드에 Pod 배치를 시도하지만, 배치되지는 않는다. PreferNoSchedule: 스케쥴러는 taint 노드에 스케쥴링 되는 것을 시도하지만, 배치되는 것을 보증하지 않는다. NoExecute: 스케쥴러는 해당 노드에 스케쥴링 하지 않으며, 기존에 배치된 Pod들에 대해서도 tolerations가 없다면, 해당 Pod는 축출된다(killed).  Example node1 노드에 blue라는 taint를 설정하며, tolarations가 blue가 아니면 스케쥴되지 않도록\nkubectl taint nodes node1 app=blue:NoSchedule Tolerations Tolerations는 Pod에 적용한다. 다음의 tolerations 설정 예시다.\napiVersion:v1kind:Podmetadata:name:myapp-podspec:containers:- name:nginx-containerimage:nginxtolerations:- key:\"app\"operator:\"Equal\"value:\"blue\"effect:\"NoSchedule\"타 예시에 비해 설정이 좀 많다. 또한 tolerations의 모든 value 값은 쌍따옴표로 선언해야 한다.\n key, value: node에 taints에 적용한 것과 동일하다. operator: key, value와의 관계를 설정한다. Equal은 key, value가 매치 되어야 함을 의미한다. effect : taint의 taint-effect와 동일하다.  Taint와 Tolerations는 제한하는 것이 목적이다. 즉 Tolerations가 설정된 Pod가 Taint설정된 노드에 배치되는 것을 보증하지는 않는다. 해당 Pod는 다른 노드에 배치될 수 있음을 명심해야 한다. 만약 특정 Pod가 특정 노드에 배치되긴 원한다면 Affinity설정을 해야 한다.\nTaint와 Tolerations는쿠버네티스를 운용하면서 자동적으로 적용된 노드가 있다. 바로 마스터 노드로, 설정을 하지 않는 한, 마스터 노드에는 Pod가 배치되지 않는 걸 볼 수 있다. 이는 마스터 노드에 Taint가 설정되어 있기 때문이다.\nkubectl describe node kubemaster | grep Taint Taints: node-role.kubernetes.io/master:NoSchedule ","wordCount":"325","inLanguage":"en","datePublished":"2024-01-30T00:00:26+09:00","dateModified":"2024-01-30T00:00:26+09:00","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/"},"publisher":{"@type":"Organization","name":"Moo-woong","logo":{"@type":"ImageObject","url":"https://moo-woong.github.io/%3Clink%20/%20abs%20url%3E"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -70,18 +80,74 @@
 <h1 class=post-title>
 Kubernetes Study 11 Taints Tolerations
 </h1>
-<div class=post-meta><span title="2024-01-30 00:00:26 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;3 words&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/kubernetes/kubernetes-study-11-taints-tolerations.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
+<div class=post-meta><span title="2024-01-30 00:00:26 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/kubernetes/kubernetes-study-11-taints-tolerations.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class=toc>
 <details open>
 <summary accesskey=c title="(Alt + C)">
 <span class=details>Table of Contents</span>
 </summary>
-<div class=inner><nav id=TableOfContents></nav>
+<div class=inner><nav id=TableOfContents>
+<ul>
+<li><a href=#예시>예시</a></li>
+<li><a href=#사용법>사용법</a>
+<ul>
+<li><a href=#taint>Taint</a></li>
+<li><a href=#tolerations>Tolerations</a></li>
+</ul>
+</li>
+</ul>
+</nav>
 </div>
 </details>
 </div>
 <div class=post-content><h1 id=taints-and-tolerations>Taints and Tolerations<a hidden class=anchor aria-hidden=true href=#taints-and-tolerations>#</a></h1>
+<h1 id=개념>개념<a hidden class=anchor aria-hidden=true href=#개념>#</a></h1>
+<p>본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.</p>
+<p>Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.</p>
+<h2 id=예시>예시<a hidden class=anchor aria-hidden=true href=#예시>#</a></h2>
+<p>관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.</p>
+<p>클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자. 배치되는 Pod가 특정 목적용 Pod가 아니라면, A노드를 <code>Taint(오염)</code> 시켜, Pod가 배치되는 것을 막을 수 있다.</p>
+<p>특수목적 용 Pod에는 <code>Tolerations</code>를 적용하여 <code>Taint</code>된 노드에 배치될 수 있도록 만들면 해당 Pod를 A노드에 배치될 수 있다.</p>
+<h2 id=사용법>사용법<a hidden class=anchor aria-hidden=true href=#사용법>#</a></h2>
+<h3 id=taint>Taint<a hidden class=anchor aria-hidden=true href=#taint>#</a></h3>
+<p>kubectl taint를 이용해 직접 노드에 taint를 적용할 수 있다. 적용하는 taint는 <code>key=value</code> 쌍이다.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>kubectl taint nodes node-name <span class=nv>key</span><span class=o>=</span>value:taint-effect
+</code></pre></div><p><code>key=value</code> 쌍 다음에는<code>taint-effect</code>를 입력한다. taint-effect는 tolerations가 맞지 않은 Pod에 대해 노드가 어떤 일을 수행하지 설정하는 것이다. taint-effect는 다음 세 가지 행동이 있다.</p>
+<ul>
+<li><code>NoSchedule</code>: 스케쥴러는 taint 노드에 Pod 배치를 시도하지만, 배치되지는 않는다.</li>
+<li><code>PreferNoSchedule</code>: 스케쥴러는 taint 노드에 스케쥴링 되는 것을 시도하지만, 배치되는 것을 보증하지 않는다.</li>
+<li><code>NoExecute</code>: 스케쥴러는 해당 노드에 스케쥴링 하지 않으며, 기존에 배치된 Pod들에 대해서도 tolerations가 없다면, 해당 Pod는 축출된다(killed).</li>
+</ul>
+<p><strong>Example</strong>
+node1 노드에 blue라는 taint를 설정하며, tolarations가 blue가 아니면 스케쥴되지 않도록</p>
+<pre tabindex=0><code>kubectl taint nodes node1 app=blue:NoSchedule
+</code></pre><h3 id=tolerations>Tolerations<a hidden class=anchor aria-hidden=true href=#tolerations>#</a></h3>
+<p>Tolerations는 Pod에 적용한다. 다음의 tolerations 설정 예시다.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=nt>apiVersion</span><span class=p>:</span><span class=w> </span><span class=l>v1</span><span class=w>
+</span><span class=w></span><span class=nt>kind</span><span class=p>:</span><span class=w> </span><span class=l>Pod</span><span class=w>
+</span><span class=w></span><span class=nt>metadata</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>myapp-pod</span><span class=w>
+</span><span class=w></span><span class=nt>spec</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span><span class=nt>containers</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span>- <span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>nginx-container</span><span class=w>
+</span><span class=w>    </span><span class=nt>image</span><span class=p>:</span><span class=w> </span><span class=l>nginx</span><span class=w>
+</span><span class=w>    </span><span class=nt>tolerations</span><span class=p>:</span><span class=w>
+</span><span class=w>  </span>- <span class=nt>key</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;app&#34;</span><span class=w>
+</span><span class=w>    </span><span class=nt>operator</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;Equal&#34;</span><span class=w>
+</span><span class=w>    </span><span class=nt>value</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;blue&#34;</span><span class=w>
+</span><span class=w>    </span><span class=nt>effect</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;NoSchedule&#34;</span><span class=w>
+</span></code></pre></div><p>타 예시에 비해 설정이 좀 많다. 또한 tolerations의 모든 value 값은 쌍따옴표로 선언해야 한다.</p>
+<ul>
+<li><code>key</code>, <code>value</code>: node에 taints에 적용한 것과 동일하다.</li>
+<li><code>operator</code>: key, value와의 관계를 설정한다. <code>Equal</code>은 key, value가 매치 되어야 함을 의미한다.</li>
+<li><code>effect</code> : taint의 taint-effect와 동일하다.</li>
+</ul>
+<p>Taint와 Tolerations는 <code>제한</code>하는 것이 목적이다. 즉 Tolerations가 설정된 Pod가 Taint설정된 노드에 배치되는 것을 보증하지는 않는다. 해당 Pod는 다른 노드에 배치될 수 있음을 명심해야 한다. 만약 특정 Pod가 특정 노드에 배치되긴 원한다면 <code>Affinity</code>설정을 해야 한다.</p>
+<p>Taint와 Tolerations는쿠버네티스를 운용하면서 자동적으로 적용된 노드가 있다. 바로 마스터 노드로, 설정을 하지 않는 한, 마스터 노드에는 Pod가 배치되지 않는 걸 볼 수 있다. 이는 마스터 노드에 Taint가 설정되어 있기 때문이다.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-shell data-lang=shell>kubectl describe node kubemaster <span class=p>|</span> grep Taint
+Taints:  node-role.kubernetes.io/master:NoSchedule
+</code></pre></div>
 </div>
 <footer class=post-footer>
 <ul class=post-tags>
