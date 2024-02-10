@@ -77,7 +77,7 @@ Kubernetes
 상태 모니터링 상태에 따른 상태 해결(교정) node-controller는 Cluster를 구성하는 노드들의 상태를 모니터링 합니다. 모니터링은 kube-apiserver를 통해 수행하며 매 5초 마다 상태관리를 수행합니다. 또한 노드의 이상이 감지될 시 40초간의 Grace period를 두어, 40초 이후에도 health check이 실패할 경우 NotReady Status를 만들어 해당 노드로 스케쥴링이 되지 않도록 합니다.
 repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링하고 관리합니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-24 17:16:42 +0900 KST">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-24 17:16:42 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-controller-manager" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4/></a>
 </article>
 <article class="post-entry tag-entry">
@@ -89,7 +89,7 @@ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링�
 <p>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
 운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 KST">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
 </article>
 <article class="post-entry tag-entry">
@@ -102,7 +102,7 @@ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링�
 Key-value store? 전통적으로 데이터베이스는 행과 열로 이루어진 Tabular Format 구성됩니다. 관계형 데이터베이스 SQL이 대표적입니다. key-value store는 NoSQL 데이터베이스의 한 종류이며,
 Key-value store 구조 위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-15 23:03:34 +0900 KST">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;207 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-15 23:03:34 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;207 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - ETCD" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/></a>
 </article>
 <article class="post-entry tag-entry">
@@ -114,7 +114,7 @@ Key-value store 구조 위의 테이블은 Tabular Format의 예입니다. 행(R
 <p>Kubernetes Study posts들은 Udemy의 Kubernetes 스테디셀러인 Mumshad의 Certified Kubernetes Administrator (CKA) with Practice Tests 강의를 스터디하며 강의 내용을 체득하기 위해 간략하게 정리하는 포스트입니다. 따라서 관련 내용들은 Udemy 강의 내용이며, 아직 다 학습하지는 못했지만.. 강의 내용이 아주 이해하기 쉽게 잘 설명된것 같으니 할인할 때 구매하시면 좋을것 같습니다. 저는 약 19,000에 구매했던것 같습니다.
 Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실행, 관리하는 플랫폼입니다. Google에서 처음 개발되었으며 오픈소스 기반으로 현재는 Linux foundation 재단에서 관리합니다. AWS, Azure, GCP 등 Public Cloud 업체들은 Kubernetes 환경을 제공하고 있고 규모가 있는 업체들의 경우 On-premise로 Kubernetes를 구축하여 Service를 제공하고 있습니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-15 20:26:32 +0900 KST">January 15, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;566 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-15 20:26:32 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;566 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Cluster Architecture" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/></a>
 </article>
 <article class="post-entry tag-entry">
@@ -128,7 +128,7 @@ Guest OS에 SSH 설치 $ sudo apt-get install openssh-server Docker 설치 기�
 Docker repository 설정 apt 관련 repository 설정
 $ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release Docker의 공식 GPG Key 추가...</p>
 </div>
-<footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 KST">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to VMWare로 Kubernetes 설치하기" href=https://moo-woong.github.io/posts/kubernetes/kubernetes/></a>
 </article>
 <footer class=page-footer>

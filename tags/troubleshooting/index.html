@@ -79,7 +79,7 @@ sudo의 뜻은? “super user do”.
 su 뜻은? “super user”
 해결법 su 명령어로 root계정으로 전환 [hugh@localhost ~]$ su Password: #비밀번호 입력 [root@localhost hugh]# [root@localhost hugh]# /etc/sudoers 파일에서 현재 계정을 추가 99 ## Allow root to run any commands anywhere 100 root ALL=(ALL) ALL 101 hugh ALL=(ALL) ALL # &lt;-- sudo권한이 필요한 계정 추가 root계정에서 로그아웃하고 추가한 계정에서 sudo권한이 필요한 명령어 수행 [root@localhost hugh]# exit exit [hugh@localhost ~]$ [hugh@localhost ~]$ [hugh@localhost ~]$ sudo yum install -y vim [sudo] password for hugh: Loaded plugins: fastestmirror, langpacks Loading mirror speeds from cached hostfile * base: mirror....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-03 21:25:33 +0900 KST">January 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;161 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-03 21:25:33 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;161 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Dev/Infra] XXX is not in the sudoers file.  This incident will be reported." href=https://moo-woong.github.io/posts/dev_env/sudoers_permission/></a>
 </article>
 </main>

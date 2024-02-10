@@ -70,6 +70,18 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>LeetCode 공부 - Add Two Numbers
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(67) - Add Two Numbers 문제 Non-empty 정수 Linked list 두 개가 주어진다. 각 list는 정수의 역방향, 즉 가장 낮은 자리수가 첫 번재 위치한다. 각 리스트의 정수를 더 하여 주어진 리스트와 동일하게 가장 낮은 자리 수의 정수가 먼저 오도록 배치된 LinkList를 반환하라.
+입력 Input: l1 = [2,4,3], l2 = [5,6,4] 출력 Output: [7,0,8] 풀이 두 리스트를 모두 순회하면서 리스트가 NULL이 아닐 경우, 해당 val값을 sum 변수에 합한다. carry가 발생할 경우를 고려한다....</p>
+</div>
+<footer class=entry-footer><span title="2022-12-04 22:19:32 +0900 +0900">December 4, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;237 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Add Two Numbers" href=https://moo-woong.github.io/posts/algorithm/algo_2_add_two_numbers/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>LeetCode 공부 - Plus One
 </h2>
 </header>
@@ -77,7 +89,7 @@ Posts
 <p>LeetCode(66) - Plus One 문제 정수를 표현하는 vector&lt;int> digits가 주어진다. digits는 배열로 이루어져 있지만, 정수를 표현한다. 예를들어 [3,2,1] 배열인 경우, 정수 321을 나타낸다. 주어진 digits배열에 +1 한 값을 vector&lt;int>형태로 반환하라.
 입력 Input: digits = [4,3,2,1] 출력 Output: [4,3,2,2] 풀이 맨 마지막 정수 값에 +1을 할 수 있겠으나… carry로 인한 자리수가 변경될 수 있고, 이를 위해서 예외처리가 많아질것 같다. 배열을 정수로 변환하고, 정수를 배열로 변환하도록 한다. …라고 생각했으나, 자리수가 100자리까지 나오는데 100자리수를 정수형으로 저장할 수 없다....</p>
 </div>
-<footer class=entry-footer><span title="2022-12-04 21:02:51 +0900 KST">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;200 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2022-12-04 21:02:51 +0900 +0900">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;200 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Plus One" href=https://moo-woong.github.io/posts/algorithm/algo_66_plus_one/></a>
 </article>
 <article class=post-entry>
@@ -90,7 +102,7 @@ Posts
 입력 Input: s = "luffy is still joyboy" 출력 Output: 6 풀이 string s는 문자와 공백만으로 이루어져 있으므로, string의 맨 뒷 부분 부터 검사하여 문자를 카운트 후 문자 수를 반환한다. 코드 Visual studio에서 바로 실행하도록 임의의 main문을 함께 첨부합니다. lengthOfLastWord()만 보시면 됩니다.
 #include&lt;iostream> using namespace std; int lengthOfLastWord(string s) { int count = 0; for (int i = s....</p>
 </div>
-<footer class=entry-footer><span title="2022-12-04 20:43:20 +0900 KST">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;126 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2022-12-04 20:43:20 +0900 +0900">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;126 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Length of Last Word" href=https://moo-woong.github.io/posts/algorithm/algo_58_length_of_last_word/></a>
 </article>
 <article class=post-entry>
@@ -102,7 +114,7 @@ Posts
 <p>LeetCode(35) - Search Insert Position 문제 중복을 허용하지 않는 정렬된 integer nums와 integer type의 target이 주어진다. nums배열에서 target을 발견한다면 target이 위치한 index를 반환한다. target을 찾지 못하였다면 target이 포함될 index를 반환한다. time complexity는 O(log n)을 만족해야 한다.
 입력 Input: nums = [1,3,5,6], target = 7 출력 Output: 4 풀이 O(log n) 의 조건이 없다면, 정렬된 배열이므로 for loop으로 한번 배열을 순회하면 답을 찾을 수 있다. 하지만 이 경우 Time complexity는 O(n) 이므로 사용할 수 없다....</p>
 </div>
-<footer class=entry-footer><span title="2022-12-04 19:44:43 +0900 KST">December 4, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;271 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2022-12-04 19:44:43 +0900 +0900">December 4, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;271 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Search Insert Position" href=https://moo-woong.github.io/posts/algorithm/algo_35_search_insert_position/></a>
 </article>
 <article class=post-entry>
@@ -114,20 +126,8 @@ Posts
 <p>LeetCode(27) - Remove Element 문제 중복이 허용되며, 정렬되지 않은 integer 배열 nums와 val가 주어진다. nums에서 val가 제거된 배열을 반환한다. 추가적인 array 할당은 할 수 없으며, in-place로 수정한다.
 입력 nums = [0,1,2,2,3,0,4,2], val = 2 출력 5, nums = [0,1,4,0,3,_,_,_] 풀이 문제 26과 유사한 내용이다. 전체 배열을 순회하면서 val와 다른 값이라면 count index에 현재 값을 저장한다. 정렬되지 않은 값이라고 하더라도, count index로 in-place에 저장된 값들은 이미 val과 비교된 값이므로, 현재 element와 비교만 하면 된다....</p>
 </div>
-<footer class=entry-footer><span title="2022-12-04 19:26:04 +0900 KST">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;158 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2022-12-04 19:26:04 +0900 +0900">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;158 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Remove Element" href=https://moo-woong.github.io/posts/algorithm/algo_27_remove_element/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Remove Duplicates from Sorted Array
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(26) - Remove Duplicates from Sorted Array 문제 중복이 허용된 integer type의 오름처순 배열에서, 중복된 값들을 제거한 sorted array를 만들고, 중복을 제외한 원소의 개수를 반환하라.
-입력 nums = [0,0,1,1,1,2,2,3,3,4] 출력 5, nums = [0,1,2,3,4,_,_,_,_,_] 풀이 추가적인 배열을 할당하지 않고, 주어진 vector&lt;int>를 수정할 것. 그리고 반환하는 원소의 개수 이후의 nums index는 don’t care 한다. 주어진 배열을 마사지 해서 반환해야 하므로, 배열을 순회하면서 배열의 값을 바꿔야 한다. 처음 접근은 다음과 같이 진행하였다....</p>
-</div>
-<footer class=entry-footer><span title="2022-12-04 19:12:59 +0900 KST">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;205 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Remove Duplicates from Sorted Array" href=https://moo-woong.github.io/posts/algorithm/algo_26_remove_duplicates_from_sorted_array/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

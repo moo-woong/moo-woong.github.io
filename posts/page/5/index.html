@@ -70,6 +70,19 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>LeetCode 공부 - Longest Palindrome
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(409) - Longest Palindrome 문제 문자열 s가 주어진다. 문자열 s의 문자들을 재조합하여 Palidrome을 만들 때 가장 긴 Palidrome의 길이를 반환하라.
+입력 Input: s = "abccccdd" 출력 Output: 7 문자열 abccccdd를 재조합해서 가장 큰 길이의 Palidrome을 만들면 dccaccd이므로, 해당 길이인 7을 반환한다.
+풀이 unordered_map으로 각 문자들의 출현빈도를 카운팅하고, 짝수 수를 구해 Palidrome을 계산한다. 라고 0. 처럼 생각했는데 짝수를 카운팅 후 Palidrome의 길이를 계산하는 방법을 몰라서 Solution을 보고 같이 map을 써서 본 풀이를 적는다(even이면 전체사이즈를, odd가 1 초과일때 +1 해주면 되는거였다)....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-16 23:54:27 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;239 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Longest Palindrome" href=https://moo-woong.github.io/posts/algorithm/algo_409_longest_palindrome/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - kube-apiserver
 </h2>
 </header>
@@ -77,7 +90,7 @@ Posts
 <p>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
 운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 KST">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
 </article>
 <article class=post-entry>
@@ -90,7 +103,7 @@ Posts
 Key-value store? 전통적으로 데이터베이스는 행과 열로 이루어진 Tabular Format 구성됩니다. 관계형 데이터베이스 SQL이 대표적입니다. key-value store는 NoSQL 데이터베이스의 한 종류이며,
 Key-value store 구조 위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-15 23:03:34 +0900 KST">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;207 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-15 23:03:34 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;207 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - ETCD" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/></a>
 </article>
 <article class=post-entry>
@@ -102,7 +115,7 @@ Key-value store 구조 위의 테이블은 Tabular Format의 예입니다. 행(R
 <p>Kubernetes Study posts들은 Udemy의 Kubernetes 스테디셀러인 Mumshad의 Certified Kubernetes Administrator (CKA) with Practice Tests 강의를 스터디하며 강의 내용을 체득하기 위해 간략하게 정리하는 포스트입니다. 따라서 관련 내용들은 Udemy 강의 내용이며, 아직 다 학습하지는 못했지만.. 강의 내용이 아주 이해하기 쉽게 잘 설명된것 같으니 할인할 때 구매하시면 좋을것 같습니다. 저는 약 19,000에 구매했던것 같습니다.
 Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실행, 관리하는 플랫폼입니다. Google에서 처음 개발되었으며 오픈소스 기반으로 현재는 Linux foundation 재단에서 관리합니다. AWS, Azure, GCP 등 Public Cloud 업체들은 Kubernetes 환경을 제공하고 있고 규모가 있는 업체들의 경우 On-premise로 Kubernetes를 구축하여 Service를 제공하고 있습니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-15 20:26:32 +0900 KST">January 15, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;566 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-15 20:26:32 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;566 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Cluster Architecture" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/></a>
 </article>
 <article class=post-entry>
@@ -114,20 +127,8 @@ Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실�
 <p>LeetCode(387) - Find the Difference 문제 문자열 s와 t가 주어진다. 문자열 t는 문자열 s를 셔플링하고, 여기에 문자 하나를 추가한 문자열이다. 주어진 문자열 t에서 추가된 문자를 찾아 반환하라.
 입력 Input: s = "abcd", t = "abcde" 출력 Output: "e" 풀이 소문자 알파벳만으로 구성된 문자열이므로, 모든 문자의 출현 빈도를 int[26]으로 해결할 수 있다. int[26] 배열을 s, t용으로 각자 하나씩 만들고, 두 배열을 순회하면서 출현 빈도가 다른 하나의 문자를 반환한다. 문자 계산은 삽입 시 c - 'a'로 하여 a는 0 번째 index에 추가되도록 하고, 반환할 때는 index + 'a'로 계산하여 index를 알파벳으로 변환한 후 반환한다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-15 18:25:02 +0900 KST">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2023-01-15 18:25:02 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Find the Difference" href=https://moo-woong.github.io/posts/algorithm/algo_389_find_the_difference/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - First Unique Character in a String
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(387) - First Unique Character in a String 문제 문자열 s가 주어진다. 문자열s를 구성하는 문자 중, 한번만 등장하는 문자를 찾고, 그 중 가장 낮은 index를 가진 문자의 index를 반환하라.
-입력 Input: s = "loveleetcode" 출력 Output: 2 문자열 loveleetcode 중 중복되지 않은 문자는 v,t,c,o, 그리고 d 이다. 이 중 가장 낮은 index를 갖는 문자는 v이며, index는 2 이므로, 2를 반환한다. 풀이 문자를 key로 갖고, &lt;int,int> 타입의 pair를 value로 갖는 map을 이용한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-15 18:01:29 +0900 KST">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;198 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - First Unique Character in a String" href=https://moo-woong.github.io/posts/algorithm/algo_387_first_unique_character_in_a_string/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

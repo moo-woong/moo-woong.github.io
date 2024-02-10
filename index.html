@@ -82,6 +82,17 @@ Welcome to my blog
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Kubernetes Study 22 Test
+</h2>
+</header>
+<div class=entry-content>
+<p>TESTTEST </p>
+</div>
+<footer class=entry-footer><span title="2024-02-10 07:22:26 +0000 UTC">February 10, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;word&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Kubernetes Study 22 Test" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-22-test/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] DaemonSets
 </h2>
 </header>
@@ -89,7 +100,7 @@ Welcome to my blog
 <p>DaemonSet DaemonSet는 Deployment와 유사한 object로 여러 여러 pod들의 집합이다. 하지만 가장 큰 차이는 Pod instance는 노드 별 하나만 설치된다는 점이다. 이는 새로운 노드가 클러스터에 추가되는 것도 포함하며, 신규 노드가 join 시 Daemon Sets는 해당 Pod를 노드에 추가한다.
 위와 같은 특징으로 Daemon Sets는 각 노드별로 배치되어야 하는 기능에 사용 가능하다. 예를 들면 노드 별 네트워크 I/O를 모니터링 하는 agent들을 배치할 수 있다. 이처럼 노드 별 agent가 필요로 하는 서비스를 배치한다면 centralized service에서는 노드의 추가, 삭제등의 동작을 DaemonSet에 일임할 수 있다....</p>
 </div>
-<footer class=entry-footer><span title="2024-01-30 18:29:02 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;88 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2024-01-30 18:29:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;88 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] DaemonSets" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-daemonset/></a>
 </article>
 <article class=post-entry>
@@ -103,7 +114,7 @@ Requests 사용법 다음과 같이 spec.containers.resources.requests 를 이�
 apiVersion:v1kind:Podmetadata:name:simple-webapp-colorlabels:name:simple-webapp-colorspec:containers:- name:simple-webapp-colorimage:simple-webapp-colorports:- containerPort:8080resources:requests:memory:"4Gi"cpu:2단위 CPU CPU의 단위는 정수, 소수점, m 을 이용해서 설정할 수 있다. m은 milli의 뜻으로 1/1000이라서 cpu 0.1은 100m과 동일하며, 1은 1000m과 동일하다.
 CPU의 최소 단위는 1m이며 그 이하는 될 수 없다....</p>
 </div>
-<footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Resource requirements and limits" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/></a>
 </article>
 <article class=post-entry>
@@ -117,7 +128,7 @@ Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 
 예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
 클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자....</p>
 </div>
-<footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 KST">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
 </article>
 <article class=post-entry>
@@ -133,22 +144,8 @@ ReplicaSet과 Pod를 연결한 것과 같이 Service와 Pod를 연결할 수도 
 apiVersion:v1kind:Servicemetadata:name:my-servicespec:selector:app:App1ports:- protocol:TCPport:80targetPort 9376위처럼 spec.selector를 이용해 Service와 연결된 Pod를 특정할 수 있다.
 Annotations annotation은 객체에 추가적인 정보를 입력할 때 사용된다....</p>
 </div>
-<footer class=entry-footer><span title="2024-01-29 23:42:35 +0900 KST">January 29, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;95 words&nbsp;·&nbsp;Me</footer>
+<footer class=entry-footer><span title="2024-01-29 23:42:35 +0900 +0900">January 29, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;95 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Labelselector" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Kubernetes Raspberry Pi
-</h2>
-</header>
-<div class=entry-content>
-<p>라즈베리파이로 Kubernetes 클러스터 구축하기 회사에서 동일한 구글계정을 사용해서 그런지 유튜브에 Satisfying 비디오로 서버실 선정리, 라즈베리파이로 쿠버네티스 구축하기 등 영상들이 올라왔다. 신기하네, 재밌네 로 끝났었는데 한 한국인 블로거가 빠른 실행력으로 라즈베리파이로 클러스터를 구축한 포스트를 보고 나도 하기로 마음먹었다.
-https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
-구성 환경 구성
-라즈베링파이4 모델B 4GB 메모리, 128GB SD Card * 4대 L2용 8포트 iptime공유기 라즈베리파이는 6대를 준비하였으나, 2대는 추후에 master node, worker node추가 실습용으로 남겨두고, 1대의 마스터노드, 3대의 워크노드로 클러스터를 구축하기로 했다....</p>
-</div>
-<footer class=entry-footer><span title="2023-09-10 15:17:57 +0900 KST">September 10, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;660 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Raspberry Pi" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
