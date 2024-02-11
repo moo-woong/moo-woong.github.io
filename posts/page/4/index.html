@@ -70,19 +70,6 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kube-proxy
-</h2>
-</header>
-<div class=entry-content>
-<p>kube-proxy? Kubernetes cluster내에서는 같은 네임스페이스에 있는 각 Pod들은 다른 Pod들과 통신이 가능합니다. 설령 다른 워커노드에 설치된 Pod들도 마찬가지로 통신이 가능합니다. 이러한 통신을 위해서 내부 가상 네트워크인 Pod 네트워크가 필요합니다.
-저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
-Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-24 22:39:01 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-proxy" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - kubelet
 </h2>
 </header>
@@ -131,6 +118,19 @@ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링�
 </div>
 <footer class=entry-footer><span title="2023-01-23 00:27:27 +0900 +0900">January 23, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;261 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Keyboard Row" href=https://moo-woong.github.io/posts/algorithm/algo_500_keyboard_row/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>LeetCode 공부 - Longest Palindrome
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(409) - Longest Palindrome 문제 문자열 s가 주어진다. 문자열 s의 문자들을 재조합하여 Palidrome을 만들 때 가장 긴 Palidrome의 길이를 반환하라.
+입력 Input: s = "abccccdd" 출력 Output: 7 문자열 abccccdd를 재조합해서 가장 큰 길이의 Palidrome을 만들면 dccaccd이므로, 해당 길이인 7을 반환한다.
+풀이 unordered_map으로 각 문자들의 출현빈도를 카운팅하고, 짝수 수를 구해 Palidrome을 계산한다. 라고 0. 처럼 생각했는데 짝수를 카운팅 후 Palidrome의 길이를 계산하는 방법을 몰라서 Solution을 보고 같이 map을 써서 본 풀이를 적는다(even이면 전체사이즈를, odd가 1 초과일때 +1 해주면 되는거였다)....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-16 23:54:27 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;239 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Longest Palindrome" href=https://moo-woong.github.io/posts/algorithm/algo_409_longest_palindrome/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

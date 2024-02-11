@@ -70,18 +70,6 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>LeetCode 공부 - Same Tree
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(100) - Same Tree 문제 Binary Tree 두 개가 주어진다. 두 Binary Tree가 같은지 비교하여 같다면 True를, 다르다면 False를 반환한다.
-입력 root = [1,null,2,3] 출력 [1,3,2] 풀이 주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-09 22:30:45 +0900 +0900">January 9, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;220 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Same Tree" href=https://moo-woong.github.io/posts/algorithm/algo_100_same_tree/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
 <h2>LeetCode 공부 - Binary Tree Inorder Traversal
 </h2>
 </header>
@@ -134,6 +122,19 @@ $ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ 
 </div>
 <footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to VMWare로 Kubernetes 설치하기" href=https://moo-woong.github.io/posts/kubernetes/kubernetes/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>LeetCode 공부 - Remove Duplicates from Sorted List
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(83) - Remove Duplicates from Sorted List 문제 정수를 포함하는 구조체 리스트가 정렬되어 주어진다. 중복된 노드를 제외한 리스트 head를 반환하라
+입력 Input: head = [1,1,2,3,3] 출력 Output: [1,2,3] 풀이 List를 head부터 NULL이 아닐때 까지 순회하면서 현재 노드의 val과 다음 노드의 val이 같다면, cur 노드의 next를 next->next로 한칸 건너 뛴다. val과 같지 않다면 cur노드는 다음 노드를 가리킨다. 코드 LeetCode에서 바로 실행해서 이번에는 main이 없습니다.
+/** * Definition for singly-linked list....</p>
+</div>
+<footer class=entry-footer><span title="2022-12-08 23:40:46 +0900 +0900">December 8, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;145 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Remove Duplicates from Sorted List" href=https://moo-woong.github.io/posts/algorithm/algo_83_remove_duplicates_from_sorted_list/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

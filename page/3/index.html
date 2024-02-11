@@ -64,20 +64,6 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
-<h2>[Kubernetes Study] k8s objects - Recap
-</h2>
-</header>
-<div class=entry-content>
-<p>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
-가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
-A Single cluster A Single node A single Pod A single instance in a Pod 사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
-그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-29 17:00:14 +0900 +0900">January 29, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;666 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s objects - Recap" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
 <h2>LeetCode 공부 - Distribute Candies
 </h2>
 </header>
@@ -123,6 +109,19 @@ Alice는 최선의 선택을 하고싶다. n/2만큼을 먹어야한다면, 가�
 </div>
 <footer class=entry-footer><span title="2023-01-25 00:29:52 +0900 +0900">January 25, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;129 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Distribute Candies" href=https://moo-woong.github.io/posts/algorithm/algo_575_distribute_candy/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>[Kubernetes Study] k8s components - kube-proxy
+</h2>
+</header>
+<div class=entry-content>
+<p>kube-proxy? Kubernetes cluster내에서는 같은 네임스페이스에 있는 각 Pod들은 다른 Pod들과 통신이 가능합니다. 설령 다른 워커노드에 설치된 Pod들도 마찬가지로 통신이 가능합니다. 이러한 통신을 위해서 내부 가상 네트워크인 Pod 네트워크가 필요합니다.
+저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
+Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-24 22:39:01 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-proxy" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
