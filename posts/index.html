@@ -70,39 +70,6 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Kubernetes Study 21 Test
-</h2>
-</header>
-<div class=entry-content>
-<p>#test22</p>
-</div>
-<footer class=entry-footer><span title="2024-02-12 03:54:47 +0000 UTC">February 12, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;word&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Study 21 Test" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-21-test/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Kubernetes Study 20 Test
-</h2>
-</header>
-<div class=entry-content>
-<p>#Test21</p>
-</div>
-<footer class=entry-footer><span title="2024-02-12 03:53:44 +0000 UTC">February 12, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;word&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Study 20 Test" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-20-test/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Kubernetes Study 17 Test
-</h2>
-</header>
-<div class=entry-content>
-<p>#Test17</p>
-</div>
-<footer class=entry-footer><span title="2024-02-12 03:44:50 +0000 UTC">February 12, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;word&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Study 17 Test" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-17-test/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
 <h2>[Kubernetes Study] DaemonSets
 </h2>
 </header>
@@ -126,6 +93,50 @@ CPU의 최소 단위는 1m이며 그 이하는 될 수 없다....</p>
 </div>
 <footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Resource requirements and limits" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>[Kubernetes Study] Taints Tolerations
+</h2>
+</header>
+<div class=entry-content>
+<p>Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
+Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
+예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
+클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자....</p>
+</div>
+<footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>[Kubernetes Study] Labelselector
+</h2>
+</header>
+<div class=entry-content>
+<p>Label selector kubectl의 --seletor 옵션을 이용해서 필터링을 직접 가능하다
+apiVersion:v1kind:Podmetadata:name:simple-webapplabels:app:App1function:Front-end......spec:containers:- name:simple-webappimage:siple-webappports:- containerPort:8080kubectl get pods --selector app=App1 Label은 ReplicaSet, Pod, Service 등 다른 객체들 간의 연결에도 사용할 수 있다. 다음의 ReplicaSet의 예제다.
+apiVersion:v1kind:ReplicaSetmetadata:name:simple-webapplabels:app:App1function:Front-endspec:replicas:3selector:matchLabels:app:App1template:metadata:labels:app:App1function:Front-endspec:containers:- name:simple-webappimage:simple-webappmetadata.labels는 ReplicaSet에 할당되는 Label이다. spec.selector.matchLabels는 ReplicaSet과 매치되는 Pod를 지정한다. 위 yaml파일이 실행되면, ReplicaSet과 Pod가 연결된다.
+ReplicaSet과 Pod를 연결한 것과 같이 Service와 Pod를 연결할 수도 있다.
+apiVersion:v1kind:Servicemetadata:name:my-servicespec:selector:app:App1ports:- protocol:TCPport:80targetPort 9376위처럼 spec.selector를 이용해 Service와 연결된 Pod를 특정할 수 있다.
+Annotations annotation은 객체에 추가적인 정보를 입력할 때 사용된다....</p>
+</div>
+<footer class=entry-footer><span title="2024-01-29 23:42:35 +0900 +0900">January 29, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;95 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Labelselector" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Kubernetes Raspberry Pi
+</h2>
+</header>
+<div class=entry-content>
+<p>라즈베리파이로 Kubernetes 클러스터 구축하기 회사에서 동일한 구글계정을 사용해서 그런지 유튜브에 Satisfying 비디오로 서버실 선정리, 라즈베리파이로 쿠버네티스 구축하기 등 영상들이 올라왔다. 신기하네, 재밌네 로 끝났었는데 한 한국인 블로거가 빠른 실행력으로 라즈베리파이로 클러스터를 구축한 포스트를 보고 나도 하기로 마음먹었다.
+https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
+구성 환경 구성
+라즈베링파이4 모델B 4GB 메모리, 128GB SD Card * 4대 L2용 8포트 iptime공유기 라즈베리파이는 6대를 준비하였으나, 2대는 추후에 master node, worker node추가 실습용으로 남겨두고, 1대의 마스터노드, 3대의 워크노드로 클러스터를 구축하기로 했다....</p>
+</div>
+<footer class=entry-footer><span title="2023-09-10 15:17:57 +0900 +0900">September 10, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;685 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Kubernetes Raspberry Pi" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

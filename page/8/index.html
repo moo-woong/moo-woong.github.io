@@ -64,44 +64,6 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
-<h2>LeetCode 공부 - Intersection of Two Linked Lists
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(160) - Intersection of Two Linked Lists 문제 두 Linked List의 headA, headB가 주어진다. 두 List 가 만나는 교차점이 있다면 해당 노드를 반환하고, 두 리스트가 교차하지 않고 평행하다면 null을 반환하라.
-입력 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3 skipA, skipB는 주어지는 값이 아닌 설명을 위한 예시이다.
-출력 Output: Intersected at '8' 풀이 문제 - Linked List Cycle 와 매우 유사하다. unordered_set을 이용해 ListNode의 고유성을 기준으로 교차점이 있는지 판단한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-10 22:31:16 +0900 +0900">January 10, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;148 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Intersection of Two Linked Lists" href=https://moo-woong.github.io/posts/algorithm/algo_160_intersection_of_two_linked_lists/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Linked List Cycle
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(141) - Linked List Cycle 문제 Linked List의 head가 주어진다. 주어진 Linked List가 cycle을 갖는지 판단하라.
-입력 head = [3,2,0,-4], pos = 1 pos는 주어지는 값이 아니고 설명을 돕기위한 예시입니다..
-출력 Output: true Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed). 풀이 ListNode의 포인터는 유니크하므로, 해당 포인터를 set으로 관리하여 중복을 확인한다. ListNode 타입의 unordered_set을 만든다. unordered_set에 현재 ListNode의 포인터가 없다면 현재 노드를 set에 삽입한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-10 14:50:12 +0900 +0900">January 10, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;127 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Linked List Cycle" href=https://moo-woong.github.io/posts/algorithm/algo_141_linked_list_cycle/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Same Tree
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(100) - Same Tree 문제 Binary Tree 두 개가 주어진다. 두 Binary Tree가 같은지 비교하여 같다면 True를, 다르다면 False를 반환한다.
-입력 root = [1,null,2,3] 출력 [1,3,2] 풀이 주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-09 22:30:45 +0900 +0900">January 9, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;220 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Same Tree" href=https://moo-woong.github.io/posts/algorithm/algo_100_same_tree/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
 <h2>LeetCode 공부 - Binary Tree Inorder Traversal
 </h2>
 </header>
@@ -125,6 +87,48 @@
 </div>
 <footer class=entry-footer><span title="2023-01-07 00:20:44 +0900 +0900">January 7, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;295 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Merge Sorted Array" href=https://moo-woong.github.io/posts/algorithm/algo_88_merge_sorted_array/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>[Dev/Infra] XXX is not in the sudoers file. This incident will be reported.
+</h2>
+</header>
+<div class=entry-content>
+<p>XXX is not in the sudoers file. This incident will be reported. Ubuntu, CentOS 등 리눅스 환경을 새로 설치하면 만나는 오류. 개발 툴을 설정하기 위해 유틸들을 설치할때 sudo를 사용하다 마주하게 된다.
+XXX is not in the sudoers file. This incident will be reported. 원인 현재 접속중인 계정이 sudoers에 등록되지 않아 발생한다. sudoers파일에 현재 계정을 등록하여 sudo권한을 주자.
+sudo의 뜻은? “super user do”.
+su 뜻은? “super user”
+해결법 su 명령어로 root계정으로 전환 [hugh@localhost ~]$ su Password: #비밀번호 입력 [root@localhost hugh]# [root@localhost hugh]# /etc/sudoers 파일에서 현재 계정을 추가 99 ## Allow root to run any commands anywhere 100 root ALL=(ALL) ALL 101 hugh ALL=(ALL) ALL # &lt;-- sudo권한이 필요한 계정 추가 root계정에서 로그아웃하고 추가한 계정에서 sudo권한이 필요한 명령어 수행 [root@localhost hugh]# exit exit [hugh@localhost ~]$ [hugh@localhost ~]$ [hugh@localhost ~]$ sudo yum install -y vim [sudo] password for hugh: Loaded plugins: fastestmirror, langpacks Loading mirror speeds from cached hostfile * base: mirror....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-03 21:25:33 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;161 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Dev/Infra] XXX is not in the sudoers file.  This incident will be reported." href=https://moo-woong.github.io/posts/dev_env/sudoers_permission/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>VMWare로 Kubernetes 설치하기
+</h2>
+</header>
+<div class=entry-content>
+<p>VM생성 및 설정 2개 이상의 CPU Core, 2G이상의 메모리를 설정하여 VM을 생성합니다. 저는 용량이 부족해서 Kubernetes의 최소 요구사항인 2CPU, 2GMem으로 진행하였습니다. 앞으로 진행하는 절차들은 모두 모든 노드에 동일하게 진행합니다.
+Guest OS에 SSH 설치 $ sudo apt-get install openssh-server Docker 설치 기본적인 설치는 Docker의 Official Installation Guide를 따릅니다.
+Docker repository 설정 apt 관련 repository 설정
+$ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release Docker의 공식 GPG Key 추가...</p>
+</div>
+<footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to VMWare로 Kubernetes 설치하기" href=https://moo-woong.github.io/posts/kubernetes/kubernetes/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>LeetCode 공부 - Remove Duplicates from Sorted List
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(83) - Remove Duplicates from Sorted List 문제 정수를 포함하는 구조체 리스트가 정렬되어 주어진다. 중복된 노드를 제외한 리스트 head를 반환하라
+입력 Input: head = [1,1,2,3,3] 출력 Output: [1,2,3] 풀이 List를 head부터 NULL이 아닐때 까지 순회하면서 현재 노드의 val과 다음 노드의 val이 같다면, cur 노드의 next를 next->next로 한칸 건너 뛴다. val과 같지 않다면 cur노드는 다음 노드를 가리킨다. 코드 LeetCode에서 바로 실행해서 이번에는 main이 없습니다.
+/** * Definition for singly-linked list....</p>
+</div>
+<footer class=entry-footer><span title="2022-12-08 23:40:46 +0900 +0900">December 8, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;145 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Remove Duplicates from Sorted List" href=https://moo-woong.github.io/posts/algorithm/algo_83_remove_duplicates_from_sorted_list/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
