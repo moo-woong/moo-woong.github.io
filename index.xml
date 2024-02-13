@@ -9,7 +9,18 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 30 Jan 2024 18:29:02 +0900</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Feb 2024 13:11:30 +0000</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes Raspberry Pi Os</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi-os/</link>
+      <pubDate>Tue, 13 Feb 2024 13:11:30 +0000</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi-os/</guid>
+      <description>How to establish kubernetes cluster using Raspberry Pi OS
+Prepare Raspberry-pi OS image using imager     Setting up raspberry-pi OS Update OS and repo sudo apt update -y &amp;amp;&amp;amp; sudo apt dist-upgrade -y reboot
+sudo reboot Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-swapfile uninstall sudo apt purge -y dphys-swapfile sudo apt autoremove -y Add cgroups echo &amp;#34; cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1&amp;#34; | sudo tee -a /boot/cmdline.txt Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-swapfile uninstall sudo apt purge -y dphys-swapfile sudo apt autoremove -y Or update cmdline</description>
+    </item>
+    
     <item>
       <title>[Kubernetes Study] DaemonSets</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-daemonset/</link>

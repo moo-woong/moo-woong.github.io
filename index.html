@@ -82,6 +82,19 @@ Welcome to my blog
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Kubernetes Raspberry Pi Os
+</h2>
+</header>
+<div class=entry-content>
+<p>How to establish kubernetes cluster using Raspberry Pi OS
+Prepare Raspberry-pi OS image using imager Setting up raspberry-pi OS Update OS and repo sudo apt update -y && sudo apt dist-upgrade -y reboot
+sudo reboot Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-swapfile uninstall sudo apt purge -y dphys-swapfile sudo apt autoremove -y Add cgroups echo " cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee -a /boot/cmdline.txt Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-swapfile uninstall sudo apt purge -y dphys-swapfile sudo apt autoremove -y Or update cmdline...</p>
+</div>
+<footer class=entry-footer><span title="2024-02-13 13:11:30 +0000 UTC">February 13, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;606 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Kubernetes Raspberry Pi Os" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi-os/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] DaemonSets
 </h2>
 </header>
@@ -135,20 +148,6 @@ Annotations annotation은 객체에 추가적인 정보를 입력할 때 사용�
 </div>
 <footer class=entry-footer><span title="2024-01-29 23:42:35 +0900 +0900">January 29, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;95 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Labelselector" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Kubernetes Raspberry Pi
-</h2>
-</header>
-<div class=entry-content>
-<p>라즈베리파이로 Kubernetes 클러스터 구축하기 회사에서 동일한 구글계정을 사용해서 그런지 유튜브에 Satisfying 비디오로 서버실 선정리, 라즈베리파이로 쿠버네티스 구축하기 등 영상들이 올라왔다. 신기하네, 재밌네 로 끝났었는데 한 한국인 블로거가 빠른 실행력으로 라즈베리파이로 클러스터를 구축한 포스트를 보고 나도 하기로 마음먹었다.
-https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
-구성 환경 구성
-라즈베링파이4 모델B 4GB 메모리, 128GB SD Card * 4대 L2용 8포트 iptime공유기 라즈베리파이는 6대를 준비하였으나, 2대는 추후에 master node, worker node추가 실습용으로 남겨두고, 1대의 마스터노드, 3대의 워크노드로 클러스터를 구축하기로 했다....</p>
-</div>
-<footer class=entry-footer><span title="2023-09-10 15:17:57 +0900 +0900">September 10, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;685 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Raspberry Pi" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
