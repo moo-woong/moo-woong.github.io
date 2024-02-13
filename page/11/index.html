@@ -64,6 +64,18 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
+<h2>LeetCode 공부 - Remove Element
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(27) - Remove Element 문제 중복이 허용되며, 정렬되지 않은 integer 배열 nums와 val가 주어진다. nums에서 val가 제거된 배열을 반환한다. 추가적인 array 할당은 할 수 없으며, in-place로 수정한다.
+입력 nums = [0,1,2,2,3,0,4,2], val = 2 출력 5, nums = [0,1,4,0,3,_,_,_] 풀이 문제 26과 유사한 내용이다. 전체 배열을 순회하면서 val와 다른 값이라면 count index에 현재 값을 저장한다. 정렬되지 않은 값이라고 하더라도, count index로 in-place에 저장된 값들은 이미 val과 비교된 값이므로, 현재 element와 비교만 하면 된다....</p>
+</div>
+<footer class=entry-footer><span title="2022-12-04 19:26:04 +0900 +0900">December 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;158 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Remove Element" href=https://moo-woong.github.io/posts/algorithm/algo_27_remove_element/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>LeetCode 공부 - Remove Duplicates from Sorted Array
 </h2>
 </header>
@@ -110,18 +122,6 @@
 </div>
 <footer class=entry-footer><span title="2022-12-01 22:37:08 +0900 +0900">December 1, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;144 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Longest Common Prefix" href=https://moo-woong.github.io/posts/algorithm/algo_14_longest_common_prefix/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Palindrome Number
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(9) - Palindrome Number 문제 integer x가 주어질 때, x가 Palindrome(회문)을 만족하면 true를 return, 아니라면 false를 리턴
-입력 x = 121 출력 true 풀이 입력 x를 string으로 변환 앞부분을 가르키는 index front와 뒷부분을 가르키는 index back을 만들어 앞부분은 증가를, 뒷부분은 감소하며 전체 string 비교 front가 back보다 커질 때 까지 비교하여 front가 back보다 커진다면 회문으로 판단, 순회를 종료하고 true반환. 비교 중 다른 값이 나온다면 곧바로 false반환 코드 class Solution { public: bool isPalindrome(int x) { string s = to_string(x); int front = 0, back = s....</p>
-</div>
-<footer class=entry-footer><span title="2022-12-01 00:27:00 +0900 +0900">December 1, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;107 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Palindrome Number" href=https://moo-woong.github.io/posts/algorithm/algo_9_palindrome_number/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

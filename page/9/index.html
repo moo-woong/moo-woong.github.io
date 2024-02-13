@@ -64,6 +64,20 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
+<h2>VMWare로 Kubernetes 설치하기
+</h2>
+</header>
+<div class=entry-content>
+<p>VM생성 및 설정 2개 이상의 CPU Core, 2G이상의 메모리를 설정하여 VM을 생성합니다. 저는 용량이 부족해서 Kubernetes의 최소 요구사항인 2CPU, 2GMem으로 진행하였습니다. 앞으로 진행하는 절차들은 모두 모든 노드에 동일하게 진행합니다.
+Guest OS에 SSH 설치 $ sudo apt-get install openssh-server Docker 설치 기본적인 설치는 Docker의 Official Installation Guide를 따릅니다.
+Docker repository 설정 apt 관련 repository 설정
+$ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release Docker의 공식 GPG Key 추가...</p>
+</div>
+<footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to VMWare로 Kubernetes 설치하기" href=https://moo-woong.github.io/posts/kubernetes/kubernetes/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>LeetCode 공부 - Remove Duplicates from Sorted List
 </h2>
 </header>
@@ -110,18 +124,6 @@
 </div>
 <footer class=entry-footer><span title="2022-12-08 00:25:33 +0900 +0900">December 8, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;193 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Add Binary" href=https://moo-woong.github.io/posts/algorithm/algo_67_add_binary/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Longest Substring Without Repeating Characters
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(3) - Longest Substring Without Repeating Characters 문제 문자열 s가 주어질 때, 이 문자열에서 반복되지 않은 문자를 갖는 substring의 길이를 반환하라.
-입력 Input: s = "abcabcbb" 출력 Output: 3 풀이 문제 설명은 간단한데 이해가 잘 안된다. 풀어서 써보자면, 문자열 중에서 중복되지 않은 문자들의 최대 길이를 구하는 문제다. 예를들어, 문자열 s = "abcdea"가 있다면, abcde 까지 중복되지 않은 문자열이므로 결과 값은 5 이다. s = "abcdeafg" 라고 하면, 두 번째 index 부터인 "bcdeafg"에는 중복이 없으므로 이 때 반환값은 문자열 길이 7 이다....</p>
-</div>
-<footer class=entry-footer><span title="2022-12-05 00:01:19 +0900 +0900">December 5, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;241 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Longest Substring Without Repeating Characters" href=https://moo-woong.github.io/posts/algorithm/algo_3_longest_substring_without_repeating_characters/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

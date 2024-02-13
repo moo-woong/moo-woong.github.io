@@ -70,6 +70,20 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Kubernetes Study 14 Static Pod
+</h2>
+</header>
+<div class=entry-content>
+<p>Static Pod란? kubelet은 kube-apiserver를 통해서 Pod가 어떤 노드에 배치되어야 하는지 알아낸다. 이러한 Node를 결정하는 것은 kube-scheduler에 의해 결정되며, ETCD 데이터베이스에 저장된다.
+이러한 일련의 작업을 해주는 k8s의 기본 리소스인 kube-apiserver와 kube-scheduler, ETCD 등이 없다면 어떻게 될까?
+각 워커노드에서 동작하는 kubelet은 독립적으로 동작할 수 있다. 만약 Pod설정 정보인 yaml파일들이 /etc/kubernetes/manifests 하위에 있다면, kubelet은 해당 파일들을 주기적으로 검사해서 yaml에 설정된 대로 Pod들을 설치할 것이다.
+파일이 존재한다면 Pod를 생성하는것 뿐만 아니라 Pod내에 container의 재시작, Pod 재생성 등의 작업 또한 가능하다....</p>
+</div>
+<footer class=entry-footer><span title="2024-02-13 13:24:42 +0000 UTC">February 13, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;271 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Kubernetes Study 14 Static Pod" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-14-static-pod/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Kubernetes Raspberry Pi Os
 </h2>
 </header>
@@ -120,22 +134,6 @@ Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 
 </div>
 <footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>[Kubernetes Study] Labelselector
-</h2>
-</header>
-<div class=entry-content>
-<p>Label selector kubectl의 --seletor 옵션을 이용해서 필터링을 직접 가능하다
-apiVersion:v1kind:Podmetadata:name:simple-webapplabels:app:App1function:Front-end......spec:containers:- name:simple-webappimage:siple-webappports:- containerPort:8080kubectl get pods --selector app=App1 Label은 ReplicaSet, Pod, Service 등 다른 객체들 간의 연결에도 사용할 수 있다. 다음의 ReplicaSet의 예제다.
-apiVersion:v1kind:ReplicaSetmetadata:name:simple-webapplabels:app:App1function:Front-endspec:replicas:3selector:matchLabels:app:App1template:metadata:labels:app:App1function:Front-endspec:containers:- name:simple-webappimage:simple-webappmetadata.labels는 ReplicaSet에 할당되는 Label이다. spec.selector.matchLabels는 ReplicaSet과 매치되는 Pod를 지정한다. 위 yaml파일이 실행되면, ReplicaSet과 Pod가 연결된다.
-ReplicaSet과 Pod를 연결한 것과 같이 Service와 Pod를 연결할 수도 있다.
-apiVersion:v1kind:Servicemetadata:name:my-servicespec:selector:app:App1ports:- protocol:TCPport:80targetPort 9376위처럼 spec.selector를 이용해 Service와 연결된 Pod를 특정할 수 있다.
-Annotations annotation은 객체에 추가적인 정보를 입력할 때 사용된다....</p>
-</div>
-<footer class=entry-footer><span title="2024-01-29 23:42:35 +0900 +0900">January 29, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;95 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] Labelselector" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
