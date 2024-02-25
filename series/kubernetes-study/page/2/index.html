@@ -69,6 +69,36 @@ Kubernetes Study
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] Labelselector
+</h2>
+</header>
+<div class=entry-content>
+<p>Label selector kubectl의 --seletor 옵션을 이용해서 필터링을 직접 가능하다
+apiVersion:v1kind:Podmetadata:name:simple-webapplabels:app:App1function:Front-end......spec:containers:- name:simple-webappimage:siple-webappports:- containerPort:8080kubectl get pods --selector app=App1 Label은 ReplicaSet, Pod, Service 등 다른 객체들 간의 연결에도 사용할 수 있다. 다음의 ReplicaSet의 예제다.
+apiVersion:v1kind:ReplicaSetmetadata:name:simple-webapplabels:app:App1function:Front-endspec:replicas:3selector:matchLabels:app:App1template:metadata:labels:app:App1function:Front-endspec:containers:- name:simple-webappimage:simple-webappmetadata.labels는 ReplicaSet에 할당되는 Label이다. spec.selector.matchLabels는 ReplicaSet과 매치되는 Pod를 지정한다. 위 yaml파일이 실행되면, ReplicaSet과 Pod가 연결된다.
+ReplicaSet과 Pod를 연결한 것과 같이 Service와 Pod를 연결할 수도 있다.
+apiVersion:v1kind:Servicemetadata:name:my-servicespec:selector:app:App1ports:- protocol:TCPport:80targetPort 9376위처럼 spec.selector를 이용해 Service와 연결된 Pod를 특정할 수 있다.
+Annotations annotation은 객체에 추가적인 정보를 입력할 때 사용된다....</p>
+</div>
+<footer class=entry-footer><span title="2024-01-29 23:42:35 +0900 +0900">January 29, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;95 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Labelselector" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-10-labelselector/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>Kubernetes Raspberry Pi
+</h2>
+</header>
+<div class=entry-content>
+<p>라즈베리파이로 Kubernetes 클러스터 구축하기 회사에서 동일한 구글계정을 사용해서 그런지 유튜브에 Satisfying 비디오로 서버실 선정리, 라즈베리파이로 쿠버네티스 구축하기 등 영상들이 올라왔다. 신기하네, 재밌네 로 끝났었는데 한 한국인 블로거가 빠른 실행력으로 라즈베리파이로 클러스터를 구축한 포스트를 보고 나도 하기로 마음먹었다.
+https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
+구성 환경 구성
+라즈베링파이4 모델B 4GB 메모리, 128GB SD Card * 4대 L2용 8포트 iptime공유기 라즈베리파이는 6대를 준비하였으나, 2대는 추후에 master node, worker node추가 실습용으로 남겨두고, 1대의 마스터노드, 3대의 워크노드로 클러스터를 구축하기로 했다....</p>
+</div>
+<footer class=entry-footer><span title="2023-09-10 15:17:57 +0900 +0900">September 10, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;685 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Kubernetes Raspberry Pi" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s objects - Pod
 </h2>
 </header>
@@ -107,32 +137,6 @@ Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 �
 </div>
 <footer class=entry-footer><span title="2023-01-24 22:39:01 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-proxy" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kubelet
-</h2>
-</header>
-<div class=entry-content>
-<p>kubelet? 앞선 포스팅에서 언급된것 처럼 kubelet은 Cluster를 구성하는 모든 워커노드에 설치됩니다. 이후 Pod배치, Pod상태 조회 요청 등 kube-apiserver의 요구를 받아 Pod의 설치, 삭제, 조회 등 실제적인 작업을 워커노드에서 수행합니다.
-Pod의 설치가 요청되면
-kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다. kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-24 22:22:42 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;123 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kubelet" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-6/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kube-scheduler
-</h2>
-</header>
-<div class=entry-content>
-<p>kube-scheduler? 앞선 포스팅에서 언급된것 처럼 kube-shceduler는 Pod를 배치할 때 어느 노드에 배치될지 결정합니다. kube-scheduler는 Pod의 배치만 결정할 뿐 실제 Pod를 Node에 배치하는 것은 각 노드에 설치된 kubelet이 관장합니다.
-kube-scheduler의 역할은 언뜻 보기에는 간단해보입니다. 하지만 실제로는 간단한 작업만을 담당하지 않습니다..!
-Cluster에는 수 각 Node에 배치될 수 많은 Pod가 있고, Worker node로 동작하는 Node들이 있을 수 있습니다. Pod가 요구하는 리소스, tolerations, nodeAffinity 등 예외조건들이 있을 수 있으며 현재 노드의 유휴 리소스에 따라 배치 가능한 Pod가 있을 수도, 없을수도 있습니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-24 21:56:21 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;290 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-scheduler" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-5/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

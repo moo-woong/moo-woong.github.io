@@ -70,72 +70,20 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Leetcode 공부 - Majority Element
+<h2>Github Blog와 Hugo로 블로그 개설하기
 </h2>
 </header>
 <div class=entry-content>
-<p>LeetCode(169) - Majority Element 문제 n의 길이를 가지는 정수형 배열 nums가 주어진다. nums에 저장된 정수 중 가장 많은 빈도의 정수를 반환하라. 가장 많은 빈도를 갖는 정수는 2/n개 이상이다.
-입력 nums = [2,2,1,1,1,2,2] 출력 Output: 2 풀이 key는 정수 값을, value는 정수의 빈도를 나타내는 unordered_map을 사용한다. nums를 순회하면서, 해당 정수의 key를 조회, value의 값을 +1 하여 빈도를 나타낸다. 빈도가 2/n이상이라면 해당 정수가 가장 많은 빈도의 정수이므로, 해당 정수를 반환한다. 코드 class Solution { public: int majorityElement(vector&lt;int>& nums) { unordered_map&lt;int, int> umap; int maxSize = nums....</p>
+<p>GitHub Blog와 Hugo로 블로그 만들기 개요 회사만 다니다보니 이 핑계, 저 핑계를 대며 개인업무 역량관리에 소홀한게 느껴졌습니다. 과거에도 공부할 때 하나하나 PPT자료를 만들며 체득했던 전공 공부, 정보들은 저한테는 좋은 경험이었습니다. 이에 대한 경험으로 블로그를 만들어 공부도 하고, 정리한 정보들을 공유하여 찾아오는 분들에게 득이되도록 하고 싶어 블로그를 만들어보게 되었습니다. 앞으로도 잘 부탁드리며 블로그 구축부터 정리해보겠습니다.
+환경 Blog: Github + Hugo Host machine: Ubuntu 20.04 LTS + VMWare workstation 16 Editor: VS Code on Windows 환경 선택에 대해서는 특별한 이유는 없습니다....</p>
 </div>
-<footer class=entry-footer><span title="2023-01-10 23:47:16 +0900 +0900">January 10, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;108 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Leetcode 공부 - Majority Element" href=https://moo-woong.github.io/posts/algorithm/algo_169_majority_element/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Intersection of Two Linked Lists
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(160) - Intersection of Two Linked Lists 문제 두 Linked List의 headA, headB가 주어진다. 두 List 가 만나는 교차점이 있다면 해당 노드를 반환하고, 두 리스트가 교차하지 않고 평행하다면 null을 반환하라.
-입력 Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3 skipA, skipB는 주어지는 값이 아닌 설명을 위한 예시이다.
-출력 Output: Intersected at '8' 풀이 문제 - Linked List Cycle 와 매우 유사하다. unordered_set을 이용해 ListNode의 고유성을 기준으로 교차점이 있는지 판단한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-10 22:31:16 +0900 +0900">January 10, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;148 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Intersection of Two Linked Lists" href=https://moo-woong.github.io/posts/algorithm/algo_160_intersection_of_two_linked_lists/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Linked List Cycle
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(141) - Linked List Cycle 문제 Linked List의 head가 주어진다. 주어진 Linked List가 cycle을 갖는지 판단하라.
-입력 head = [3,2,0,-4], pos = 1 pos는 주어지는 값이 아니고 설명을 돕기위한 예시입니다..
-출력 Output: true Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed). 풀이 ListNode의 포인터는 유니크하므로, 해당 포인터를 set으로 관리하여 중복을 확인한다. ListNode 타입의 unordered_set을 만든다. unordered_set에 현재 ListNode의 포인터가 없다면 현재 노드를 set에 삽입한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-10 14:50:12 +0900 +0900">January 10, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;127 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Linked List Cycle" href=https://moo-woong.github.io/posts/algorithm/algo_141_linked_list_cycle/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Same Tree
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(100) - Same Tree 문제 Binary Tree 두 개가 주어진다. 두 Binary Tree가 같은지 비교하여 같다면 True를, 다르다면 False를 반환한다.
-입력 root = [1,null,2,3] 출력 [1,3,2] 풀이 주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-09 22:30:45 +0900 +0900">January 9, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;220 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Same Tree" href=https://moo-woong.github.io/posts/algorithm/algo_100_same_tree/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Binary Tree Inorder Traversal
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(94) - Binary Tree Inorder Traversal 문제 Binary Tree의 root가 주어진다. Inorder Traversal(중위순회)를 한 결과를 반환하라.
-입력 root = [1,null,2,3] 출력 [1,3,2] 풀이 주어진 Binary Tree의 root에서 중위순회한다. Inorder traversal은 Bianry Tree에서 좌측 노드를 먼저 순회 후, 자기 자신, 그리고 우측 노드를 탐색하는 방법이다. 주어진 입력에서 root노드는 1, 좌측 노드는 없으므로 자기 자신 1이 먼저 출력되고, 우측 노드로 이동 한다. 우측노드에서는 좌측노드로 이동, 마찬가지고 좌/우 노드가 없으므로 자기 자신이 출력된다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-09 22:20:19 +0900 +0900">January 9, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;216 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Binary Tree Inorder Traversal" href=https://moo-woong.github.io/posts/algorithm/algo_94_binary_tree_inorder_traversal/></a>
+<footer class=entry-footer><span title="2022-10-16 08:15:52 -0700 -0700">October 16, 2022</span>&nbsp;·&nbsp;5 min&nbsp;·&nbsp;909 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to Github Blog와 Hugo로 블로그 개설하기" href=https://moo-woong.github.io/posts/2022-10-17-github-hugo/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
-<a class=prev href=https://moo-woong.github.io/posts/page/7/>
+<a class=prev href=https://moo-woong.github.io/posts/page/12/>
 «&nbsp;Prev&nbsp;
-</a>
-<a class=next href=https://moo-woong.github.io/posts/page/9/>Next&nbsp;&nbsp;»
 </a>
 </nav>
 </footer>

@@ -69,6 +69,32 @@ Kubernetes
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] Cluster Architecture
+</h2>
+</header>
+<div class=entry-content>
+<p>Kubernetes Study posts들은 Udemy의 Kubernetes 스테디셀러인 Mumshad의 Certified Kubernetes Administrator (CKA) with Practice Tests 강의를 스터디하며 강의 내용을 체득하기 위해 간략하게 정리하는 포스트입니다. 따라서 관련 내용들은 Udemy 강의 내용이며, 아직 다 학습하지는 못했지만.. 강의 내용이 아주 이해하기 쉽게 잘 설명된것 같으니 할인할 때 구매하시면 좋을것 같습니다. 저는 약 19,000에 구매했던것 같습니다.
+Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실행, 관리하는 플랫폼입니다. Google에서 처음 개발되었으며 오픈소스 기반으로 현재는 Linux foundation 재단에서 관리합니다. AWS, Azure, GCP 등 Public Cloud 업체들은 Kubernetes 환경을 제공하고 있고 규모가 있는 업체들의 경우 On-premise로 Kubernetes를 구축하여 Service를 제공하고 있습니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-15 20:26:32 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;566 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Cluster Architecture" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-1/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>VMWare로 Kubernetes 설치하기
+</h2>
+</header>
+<div class=entry-content>
+<p>VM생성 및 설정 2개 이상의 CPU Core, 2G이상의 메모리를 설정하여 VM을 생성합니다. 저는 용량이 부족해서 Kubernetes의 최소 요구사항인 2CPU, 2GMem으로 진행하였습니다. 앞으로 진행하는 절차들은 모두 모든 노드에 동일하게 진행합니다.
+Guest OS에 SSH 설치 $ sudo apt-get install openssh-server Docker 설치 기본적인 설치는 Docker의 Official Installation Guide를 따릅니다.
+Docker repository 설정 apt 관련 repository 설정
+$ sudo apt-get update $ sudo apt-get install \ ca-certificates \ curl \ gnupg \ lsb-release Docker의 공식 GPG Key 추가...</p>
+</div>
+<footer class=entry-footer><span title="2023-01-03 20:46:06 +0900 +0900">January 3, 2023</span>&nbsp;·&nbsp;8 min&nbsp;·&nbsp;1541 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to VMWare로 Kubernetes 설치하기" href=https://moo-woong.github.io/posts/kubernetes/kubernetes/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>Ubuntu에 Minikube 설치하기
 </h2>
 </header>

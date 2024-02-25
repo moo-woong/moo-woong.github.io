@@ -70,6 +70,34 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>[Kubernetes Study] Resource requirements and limits
+</h2>
+</header>
+<div class=entry-content>
+<p>Resource requirements and limits 각 노드는 CPU와 Memory 리소스를 갖고 있다. 스케쥴러에 이해 Pod가 배치될 때, Pod의 리소스 요청 사항과 노드의 리소스 사용량은 스케쥴링에 직접적인 영향을 미친다.
+Requests 사용법 다음과 같이 spec.containers.resources.requests 를 이용해 Pod에 리소스 정보를 명세할 수 있다.
+apiVersion:v1kind:Podmetadata:name:simple-webapp-colorlabels:name:simple-webapp-colorspec:containers:- name:simple-webapp-colorimage:simple-webapp-colorports:- containerPort:8080resources:requests:memory:"4Gi"cpu:2단위 CPU CPU의 단위는 정수, 소수점, m 을 이용해서 설정할 수 있다. m은 milli의 뜻으로 1/1000이라서 cpu 0.1은 100m과 동일하며, 1은 1000m과 동일하다.
+CPU의 최소 단위는 1m이며 그 이하는 될 수 없다....</p>
+</div>
+<footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Resource requirements and limits" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>[Kubernetes Study] Taints Tolerations
+</h2>
+</header>
+<div class=entry-content>
+<p>Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
+Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
+예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
+클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자....</p>
+</div>
+<footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] Labelselector
 </h2>
 </header>
@@ -109,30 +137,6 @@ https://www.binaryflavor.com/raspberry-pi-kubernetes-1/
 </div>
 <footer class=entry-footer><span title="2023-02-05 15:52:48 +0900 +0900">February 5, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;118 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode - Jewels and Stones " href=https://moo-woong.github.io/posts/algorithm/algo_771/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode - Degree of an Array
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(697) - Degree of an Array 문제 정수 배열 nums가 주어진다. nums에서 가장 많이 등장하는 정수를 찾고, nums에서 가장 많이 등장하는 정수를 포함하는 sub array를 만들 때, 배열의 길이를 구하라.
-입력 Input: nums = [1,2,2,3,1] 출력 Output: 2 설명 가장 많이 등장하는 정수는 1과 2다. 1 혹은 2가 모두 포함되는 배열의 sub array를 만들 면 다음과 같다. [1, 2, 2, 3, 1], [1, 2, 2, 3], [2, 2, 3, 1], [1, 2, 2], [2, 2, 3], [2, 2] 이 sub array 중 가장 짧은 배열의 길이를 갖는 배열은 [2, 2] 이며, 길이는 2이므로 2를 반환한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-02-05 15:22:58 +0900 +0900">February 5, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;290 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode - Degree of an Array" href=https://moo-woong.github.io/posts/algorithm/algo_697/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode - Two Sum IV - Input is a BST
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(653) - Two Sum IV - Input is a BST 문제 Binary Search Tree의 root node 와 정수 k가 주어진다. BST정수 중 두 정수를 조합하여 k를 만들 수 있다면 true를, 아니라면 false를 반환하라.
-입력 Input: root = [5,3,6,2,4,null,7], k = 9 출력 Output: true 풀이 set은 key의 유일성을 보장하며, 고유한 key 검색 시 O(1)의 시간복잡도를 가진다. k - 특정 노드 값이면, 나머지 값에 대해 검색연산을 수행하여 값을 찾을 수 있다....</p>
-</div>
-<footer class=entry-footer><span title="2023-02-05 15:09:52 +0900 +0900">February 5, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;230 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode - Two Sum IV - Input is a BST" href=https://moo-woong.github.io/posts/algorithm/algo_653/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
