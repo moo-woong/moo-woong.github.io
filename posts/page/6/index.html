@@ -70,6 +70,18 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>[Kubernetes Study] k8s components - kube-apiserver
+</h2>
+</header>
+<div class=entry-content>
+<p>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
+운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - ETCD
 </h2>
 </header>
@@ -116,18 +128,6 @@ Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실�
 </div>
 <footer class=entry-footer><span title="2023-01-15 18:01:29 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;198 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - First Unique Character in a String" href=https://moo-woong.github.io/posts/algorithm/algo_387_first_unique_character_in_a_string/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - Ransom Note
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(383) - Ransom Note 문제 문자열 ransomNote와 magazine 이 주어진다. ransomNote를 이용해 magazine의 일부를 구성할 수 있다면 true를, 아니라면 false를 반환하라.
-구성에 있어서 순서는 상관이 없다. ransomNote가 aab 이고, magazine이 baa라면, ransomNote의 재배열이 magazine의 일부이므로 true이다. 입력 Input: ransomNote = "aa", magazine = "aab" 출력 Output: true 풀이 ransomNote를 모두 소비했을 때 magazine의 일부일 경우 true를 반환한다. ransomNote에 있는 문자가 magazine에 없다면 false이다. ransomNote의 문자열을 순회하며 각 문자들을 map에 key로 하고 value는 등장 횟수마다 +1 한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-14 20:22:37 +0900 +0900">January 14, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;171 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - Ransom Note" href=https://moo-woong.github.io/posts/algorithm/algo_383_ransom_note/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

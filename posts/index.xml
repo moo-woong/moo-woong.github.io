@@ -9,7 +9,18 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 25 Feb 2024 12:17:34 +0000</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Feb 2024 11:13:52 +0000</lastBuildDate><atom:link href="https://moo-woong.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Kubernetes Study] Monitor Cluster Components</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/</link>
+      <pubDate>Tue, 27 Feb 2024 11:13:52 +0000</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/</guid>
+      <description>Monitor k8s의 Monitoring 지표들은 다양하다. 다음의 k8s는 다음과 같은 지표들을 확인할 수 있다.
+ 노드 레벨의 통계: 클러스터를 구성하는 노드의 개수 및 상태 성능지표: CPU, 메모리 사용량, 디스크, 네트워크 I/O Pod 레벨지표: Pod의 개수, Pod의 자원 사용량 등  이처럼 다양한 성능지표들을 모니터링 할 수 있으나 중앙화된 관리와 해당 정보를 가공할 수 있는 솔루션이 필요하다.
+k8s에는 default로 탑재되는 모니터링 솔루션이 없지만 오픈소스로 공개된 다양한 솔루션들으 있으며 사용할 수 있다. 예를들면 Prometheus, Elastic Stack, Datadog, dynatrace등이 있다.</description>
+    </item>
+    
     <item>
       <title>[Kubernetes Study] Scheduler configuration</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-16-scheduler-configuration/</link>

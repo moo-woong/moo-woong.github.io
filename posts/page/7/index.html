@@ -70,6 +70,18 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>LeetCode 공부 - Ransom Note
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(383) - Ransom Note 문제 문자열 ransomNote와 magazine 이 주어진다. ransomNote를 이용해 magazine의 일부를 구성할 수 있다면 true를, 아니라면 false를 반환하라.
+구성에 있어서 순서는 상관이 없다. ransomNote가 aab 이고, magazine이 baa라면, ransomNote의 재배열이 magazine의 일부이므로 true이다. 입력 Input: ransomNote = "aa", magazine = "aab" 출력 Output: true 풀이 ransomNote를 모두 소비했을 때 magazine의 일부일 경우 true를 반환한다. ransomNote에 있는 문자가 magazine에 없다면 false이다. ransomNote의 문자열을 순회하며 각 문자들을 map에 key로 하고 value는 등장 횟수마다 +1 한다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-14 20:22:37 +0900 +0900">January 14, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;171 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Ransom Note" href=https://moo-woong.github.io/posts/algorithm/algo_383_ransom_note/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>LeetCode 공부 - Intersection of Two Arrays II
 </h2>
 </header>
@@ -116,18 +128,6 @@ Constraints: n == nums.length 1 &lt;= n &lt;= 104 0 &lt;= nums[i] &lt;= n All th
 </div>
 <footer class=entry-footer><span title="2023-01-14 00:06:19 +0900 +0900">January 14, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;229 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to Leetcode 공부 - Valid Anagram" href=https://moo-woong.github.io/posts/algorithm/algo_242_valid_anagram/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode 공부 - Container Duplicate
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(217) - Contains Duplicate 문제 정수 배열 nums가 주어진다. 중복된 정수가 배열에 있다면 true를 반환하고 중복이 없다면 false를 반환하라
-입력 Input: nums = [1,1,1,3,3,4,3,2,4,2] 출력 Output: true 풀이 배열을 순회하면서 각 값들을 set에 넣는다. set에 현재 배열의 값과 동일한 값이 있다면 중복이므로 true를 반환한다. 배열을 모두 순회했다면 중복이 없으므로 false를 반환한다. 코드 bool containsDuplicate(vector&lt;int>& nums) { unordered_set&lt;int> uset; for(int num : nums) { if(uset.count(num) > 0) { return true; } uset....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-13 23:13:43 +0900 +0900">January 13, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;75 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Leetcode 공부 - Container Duplicate" href=https://moo-woong.github.io/posts/algorithm/algo_217_contains_duplicate/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

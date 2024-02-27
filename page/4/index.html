@@ -68,6 +68,18 @@
 </h2>
 </header>
 <div class=entry-content>
+<p>LeetCode(645) - Set Mismatch 문제 정수형 set이 배열형태로 주어진다. set은 1부터 set의 크기인 n까지 중복되지 않은 값으로 채워져 있어야 한다. nums에 하나의 정수가 다른 정수(1 &lt;= 다른정수> &lt;= n)로 바뀌었다. 이 중복된 수와 원래 있어야 할 수를 찾아 배열 형태로 반환하라.
+입력 Input: nums = [1,2,2,4] 출력 Output: [2,3] 풀이 주어진 배열에 대해 중복을 찾아야 하고, 빠진 값 또한 찾아야 한다. 중복된 배열은 map으로 고유성을 찾고, 누락 된 값은 정렬 후 index와 값을 비교하여 다르다면 누락된 값으로 간주한다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-29 16:05:59 +0900 +0900">January 29, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;234 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Distribute Candies" href=https://moo-woong.github.io/posts/algorithm/algo_645/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>LeetCode 공부 - Distribute Candies
+</h2>
+</header>
+<div class=entry-content>
 <p>LeetCode(599) - Minimum Index Sum of Two Lists 문제 문자열 배열 list1과 list2가 주어진다. 다음과 같은 조건을 갖는 문자열들을 반환하라.
 list1, list2모두에 존재하는 문자열 문자열 중, 가장 낮은 인덱스를 갖는 문자열 가장 낮은 index가 양쪽 배열 모두 동일하다면 두 문자열을 배열 형태로 반환. 입력 list1 = ["Shogun","Tapioca Express","Burger King","KFC"], list2 = ["Piatti","The Grill at Torrey Pines","Hungry Hunter Steakhouse","Shogun" 출력 Output: ["Shogun"] 풀이 문자열을 key로, index를 value로 하는 map에 list1의 문자열들을 삽입한다....</p>
 </div>
@@ -110,19 +122,6 @@ Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 �
 </div>
 <footer class=entry-footer><span title="2023-01-24 22:39:01 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-proxy" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kubelet
-</h2>
-</header>
-<div class=entry-content>
-<p>kubelet? 앞선 포스팅에서 언급된것 처럼 kubelet은 Cluster를 구성하는 모든 워커노드에 설치됩니다. 이후 Pod배치, Pod상태 조회 요청 등 kube-apiserver의 요구를 받아 Pod의 설치, 삭제, 조회 등 실제적인 작업을 워커노드에서 수행합니다.
-Pod의 설치가 요청되면
-kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다. kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-24 22:22:42 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;123 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kubelet" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-6/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

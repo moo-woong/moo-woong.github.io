@@ -70,6 +70,19 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>[Kubernetes Study] Monitor Cluster Components
+</h2>
+</header>
+<div class=entry-content>
+<p>Monitor k8s의 Monitoring 지표들은 다양하다. 다음의 k8s는 다음과 같은 지표들을 확인할 수 있다.
+노드 레벨의 통계: 클러스터를 구성하는 노드의 개수 및 상태 성능지표: CPU, 메모리 사용량, 디스크, 네트워크 I/O Pod 레벨지표: Pod의 개수, Pod의 자원 사용량 등 이처럼 다양한 성능지표들을 모니터링 할 수 있으나 중앙화된 관리와 해당 정보를 가공할 수 있는 솔루션이 필요하다.
+k8s에는 default로 탑재되는 모니터링 솔루션이 없지만 오픈소스로 공개된 다양한 솔루션들으 있으며 사용할 수 있다. 예를들면 Prometheus, Elastic Stack, Datadog, dynatrace등이 있다....</p>
+</div>
+<footer class=entry-footer><span title="2024-02-27 11:13:52 +0000 UTC">February 27, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Monitor Cluster Components" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] Scheduler configuration
 </h2>
 </header>
@@ -121,18 +134,6 @@ sudo reboot Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-sw
 </div>
 <footer class=entry-footer><span title="2024-02-13 13:11:30 +0000 UTC">February 13, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;606 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to Kubernetes Raspberry Pi Os" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi-os/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>[Kubernetes Study] DaemonSets
-</h2>
-</header>
-<div class=entry-content>
-<p>DaemonSet DaemonSet는 Deployment와 유사한 object로 여러 여러 pod들의 집합이다. 하지만 가장 큰 차이는 Pod instance는 노드 별 하나만 설치된다는 점이다. 이는 새로운 노드가 클러스터에 추가되는 것도 포함하며, 신규 노드가 join 시 Daemon Sets는 해당 Pod를 노드에 추가한다.
-위와 같은 특징으로 Daemon Sets는 각 노드별로 배치되어야 하는 기능에 사용 가능하다. 예를 들면 노드 별 네트워크 I/O를 모니터링 하는 agent들을 배치할 수 있다. 이처럼 노드 별 agent가 필요로 하는 서비스를 배치한다면 centralized service에서는 노드의 추가, 삭제등의 동작을 DaemonSet에 일임할 수 있다....</p>
-</div>
-<footer class=entry-footer><span title="2024-01-30 18:29:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;88 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] DaemonSets" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-daemonset/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

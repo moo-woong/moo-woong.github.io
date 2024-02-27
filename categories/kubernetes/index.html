@@ -69,6 +69,19 @@ Kubernetes
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] Monitor Cluster Components
+</h2>
+</header>
+<div class=entry-content>
+<p>Monitor k8s의 Monitoring 지표들은 다양하다. 다음의 k8s는 다음과 같은 지표들을 확인할 수 있다.
+노드 레벨의 통계: 클러스터를 구성하는 노드의 개수 및 상태 성능지표: CPU, 메모리 사용량, 디스크, 네트워크 I/O Pod 레벨지표: Pod의 개수, Pod의 자원 사용량 등 이처럼 다양한 성능지표들을 모니터링 할 수 있으나 중앙화된 관리와 해당 정보를 가공할 수 있는 솔루션이 필요하다.
+k8s에는 default로 탑재되는 모니터링 솔루션이 없지만 오픈소스로 공개된 다양한 솔루션들으 있으며 사용할 수 있다. 예를들면 Prometheus, Elastic Stack, Datadog, dynatrace등이 있다....</p>
+</div>
+<footer class=entry-footer><span title="2024-02-27 11:13:52 +0000 UTC">February 27, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Monitor Cluster Components" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>[Kubernetes Study] Scheduler configuration
 </h2>
 </header>
@@ -119,20 +132,6 @@ CPU의 최소 단위는 1m이며 그 이하는 될 수 없다....</p>
 </div>
 <footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Resource requirements and limits" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] Taints Tolerations
-</h2>
-</header>
-<div class=entry-content>
-<p>Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
-Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
-예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
-클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자....</p>
-</div>
-<footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

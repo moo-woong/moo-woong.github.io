@@ -69,6 +69,19 @@ Kubernetes Study
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] k8s components - kube-proxy
+</h2>
+</header>
+<div class=entry-content>
+<p>kube-proxy? Kubernetes cluster내에서는 같은 네임스페이스에 있는 각 Pod들은 다른 Pod들과 통신이 가능합니다. 설령 다른 워커노드에 설치된 Pod들도 마찬가지로 통신이 가능합니다. 이러한 통신을 위해서 내부 가상 네트워크인 Pod 네트워크가 필요합니다.
+저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
+Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-24 22:39:01 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-proxy" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - kubelet
 </h2>
 </header>
@@ -117,19 +130,6 @@ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링�
 </div>
 <footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - ETCD
-</h2>
-</header>
-<div class=entry-content>
-<p>etcd? etcd는 key-value 분산 저장소입니다. 오픈소스이며, Kubernetes에서 사용되어 유명해진 데이터베이스입니다. 분산 저장소라는 말에서 알 수 있듯이 ETCD는 Replication State Machine이며, 분산 컴퓨팅 환경에서 High Availability를 제공하고 높은 신뢰성을 제공합니다. Kubernetes의 다양한 정보들이 ETCD를 통해 저장되므로 고가용성이 중요합니다.
-Key-value store? 전통적으로 데이터베이스는 행과 열로 이루어진 Tabular Format 구성됩니다. 관계형 데이터베이스 SQL이 대표적입니다. key-value store는 NoSQL 데이터베이스의 한 종류이며,
-Key-value store 구조 위의 테이블은 Tabular Format의 예입니다. 행(Row)는 각 사람들의 정보를 나타내고 열(Column)은 각 타입의 값을 나타냅니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-15 23:03:34 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;207 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - ETCD" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-2/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

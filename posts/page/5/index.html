@@ -70,6 +70,19 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>[Kubernetes Study] k8s components - kubelet
+</h2>
+</header>
+<div class=entry-content>
+<p>kubelet? 앞선 포스팅에서 언급된것 처럼 kubelet은 Cluster를 구성하는 모든 워커노드에 설치됩니다. 이후 Pod배치, Pod상태 조회 요청 등 kube-apiserver의 요구를 받아 Pod의 설치, 삭제, 조회 등 실제적인 작업을 워커노드에서 수행합니다.
+Pod의 설치가 요청되면
+kube-scheudler Pod가 설치될 노드들을 파악 후, Node1에 Pod생성을 요청합니다. kube-scheduler의 요청을 받은 kube-apiserver해당 Pod설치 정보를 Node1의 kubelet에 요청합니다. kubelet은 해당 워커노드의 runtime-engine을 통해 Pod를 생성합니다. 작업완료 후 kubelet은 작업완료 내용을 kube-apiserver에 알립니다. kubelet은 kube-apiserver, kube-scheduler와 달리 Vanilla kubernetes에 포함되어 있지 않습니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-24 22:22:42 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;123 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kubelet" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-6/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - kube-scheduler
 </h2>
 </header>
@@ -118,18 +131,6 @@ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링�
 </div>
 <footer class=entry-footer><span title="2023-01-16 23:54:27 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;239 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Longest Palindrome" href=https://moo-woong.github.io/posts/algorithm/algo_409_longest_palindrome/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kube-apiserver
-</h2>
-</header>
-<div class=entry-content>
-<p>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
-운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

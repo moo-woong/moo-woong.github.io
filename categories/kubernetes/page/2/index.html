@@ -69,6 +69,20 @@ Kubernetes
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] Taints Tolerations
+</h2>
+</header>
+<div class=entry-content>
+<p>Taints and Tolerations 개념 본 포스트에서 사용되는 예시들은 Security나 Intrusion 설정이 되지 않은 것으로 간주한다.
+Taint와 Tolerations는 Label과 Selector와 유사하다. Label과 Selector는 필터링과 필터링을 이용한 객체들간의 매핑과 관련되었다면, Taint와 Tolerations는 Pod가 노드에 배치 될 때 제약사항을 만드는 것이다.
+예시 관리자가 Pod 배치를 요청하면, 쿠버네티스 스케쥴러는 노드 중 가용 가능한 노드에 Pod를 배치하려 할 것이다. 만약 제약사항이 없다면 스케쥴러는 균등하게 Pod들을 노드에 배치할 것이다.
+클러스터에 노드가 3개 있으며, 그 중 A라는 노드는 특정 목적을 위해 사용되는 노드라고 가정해보자....</p>
+</div>
+<footer class=entry-footer><span title="2024-01-30 00:00:26 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;325 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Taints Tolerations" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-11-taints-tolerations/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>[Kubernetes Study] Labelselector
 </h2>
 </header>
@@ -124,19 +138,6 @@ A Single cluster A Single node A single Pod A single instance in a Pod 사용자
 </div>
 <footer class=entry-footer><span title="2023-01-29 17:00:14 +0900 +0900">January 29, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;666 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s objects - Recap" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kube-proxy
-</h2>
-</header>
-<div class=entry-content>
-<p>kube-proxy? Kubernetes cluster내에서는 같은 네임스페이스에 있는 각 Pod들은 다른 Pod들과 통신이 가능합니다. 설령 다른 워커노드에 설치된 Pod들도 마찬가지로 통신이 가능합니다. 이러한 통신을 위해서 내부 가상 네트워크인 Pod 네트워크가 필요합니다.
-저는 웹서비스 하나를 운용하고 있으며, 이를 Kubernetes를 통해 운용하고 있다고 가정하겠습니다. 저의 Backend 서버는 Node1에 배치되어 있고, 서비스의 정보를 영구적으로 저장하기 위해 데이터베이스를 사용하며, 데이터베이스는 Node2에 배치되어있습니다.
-Backend 서버는 IP(10.32.0.35)를 통해 데이터베이스에 접근할 수 있습니다. 하지만 데이터베이스가의 IP가 항상 해당 IP를 갖는다는 보장이 없습니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-24 22:39:01 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;256 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-proxy" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-7/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
