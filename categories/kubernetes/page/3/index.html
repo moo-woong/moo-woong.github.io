@@ -69,6 +69,20 @@ Kubernetes
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>[Kubernetes Study] k8s objects - Recap
+</h2>
+</header>
+<div class=entry-content>
+<p>Pod? 앞선 Study에서 언급된 바와 같이 Kubernetes가 처리하는 가장 작은 단위는 Pod입니다. 이 Pod는 Containerized 애플리케이션을 encapsulation한 단위입니다.
+가장 작은 단위의 Kubernetes의 환경을 구성해보겠습니다.
+A Single cluster A Single node A single Pod A single instance in a Pod 사용자가 늘어나 애플리케이션의 처리부하를 줄이기 위해서는 애플리케이션의 instance를 증설해야합니다.
+그렇다면 증설은 어떻게 할까요? Containerized 애플리케이션 instance를 Pod에 추가할까요? 앞서 설명했듯이 Kubernetes의 가장 작은 object 단위는 Pod이므로, Pod가 추가로 증설하여 추가되는 부하용량을 처리해야합니다....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-29 17:00:14 +0900 +0900">January 29, 2023</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;666 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] k8s objects - Recap" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-9-recap/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - kube-proxy
 </h2>
 </header>
@@ -118,18 +132,6 @@ repliaction-controller는 ReplicaSet관리와 desinered Pod 수를 모니터링�
 </div>
 <footer class=entry-footer><span title="2023-01-24 17:16:42 +0900 +0900">January 24, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-controller-manager" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] k8s components - kube-apiserver
-</h2>
-</header>
-<div class=entry-content>
-<p>kube-apiserver? kube-apiserver는 Kubernetes Cluster를 구성하데 필수적인 컴포넌트로, Cluster를 구성하는 컴포넌트들과 통신을 통해 최신의 상태를 유지할 수 있도록 합니다.
-운용자가 kubectl을 통해 CLI 명령을 한다면, kubectl은 사용자의 인증을 진행한 후 변수에 설정된 kube-apiserver주소로 REST Query를 수행합니다. 운용자가 kubectl get node명령어를 통해 현재 cluster에 join 한 노드들의 정보를보려고 한다고 가정하겠습니다. kubectl은 가장 먼저 kube-apiserver는 요청의 정당성을 확인 한 후, kubectl을 통해 요청한 정보 처리를 위해 관련된 정보를 etcd에 쿼리하여 정보를 받아서 운용자에게 응답합니다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-16 22:50:26 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;226 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] k8s components - kube-apiserver" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-3/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

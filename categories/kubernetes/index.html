@@ -69,7 +69,21 @@ Kubernetes
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>[Kubernetes Study] Monitor Cluster Components
+<h2>[Kubernetes Study] Rolling Update and Rollbacks
+</h2>
+</header>
+<div class=entry-content>
+<p>Rollout 사용자는 Application의 revision 업데이트를 rollout을 통해 수행할 수 있다. Deployment로 배치된 Application의 rollout예시는 다음과 같다.
+apiVersion:apps/v1kind:Deploymentmetadata:name:myapp-deploymentlabels:app:myapptype:front-endspec:template:metadata:name:myapp-podlabels:app:myapptype:front-endspec:containers:- name:nginx-containerimage:nginxreplicas:3selector:matchLabels:type:front-endRollout Strategy 새로운 Revision 배포방법들은 다양하다
+Recrease 현재 버전의 Pod instance를 모두 삭제하고 새로운 Revision application으로 구성한다. 이 경우 이전 버전의 Pod instance들이 모두 삭제되고 새로운 Revision application이 배치될 때 까지 서비스 장애가 발생한다.
+Rolling Update 구 버전 Pod를 하나 삭제하고 Revision Pod를 새롭게 생성한다. 이 과정을 Pod의 개수만큼 수행하면 Pod가 없어 서비스를 제공하지 못하는 장애는 발생하지 않는다....</p>
+</div>
+<footer class=entry-footer><span title="2024-02-29 12:05:58 +0000 UTC">February 29, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;551 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Rolling Update and Rollbacks" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-5-1-rolling-update-rollback/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>[Kubernetes Study] Monitor Cluster Components and Application Logs
 </h2>
 </header>
 <div class=entry-content>
@@ -77,8 +91,8 @@ Kubernetes
 노드 레벨의 통계: 클러스터를 구성하는 노드의 개수 및 상태 성능지표: CPU, 메모리 사용량, 디스크, 네트워크 I/O Pod 레벨지표: Pod의 개수, Pod의 자원 사용량 등 이처럼 다양한 성능지표들을 모니터링 할 수 있으나 중앙화된 관리와 해당 정보를 가공할 수 있는 솔루션이 필요하다.
 k8s에는 default로 탑재되는 모니터링 솔루션이 없지만 오픈소스로 공개된 다양한 솔루션들으 있으며 사용할 수 있다. 예를들면 Prometheus, Elastic Stack, Datadog, dynatrace등이 있다....</p>
 </div>
-<footer class=entry-footer><span title="2024-02-27 11:13:52 +0000 UTC">February 27, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] Monitor Cluster Components" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/></a>
+<footer class=entry-footer><span title="2024-02-27 11:13:52 +0000 UTC">February 27, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;455 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Monitor Cluster Components and Application Logs" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/></a>
 </article>
 <article class="post-entry tag-entry">
 <header class=entry-header>
@@ -118,20 +132,6 @@ kubernetes의 기본 스케쥴러는 kube-scheduler이며, 사용자가 생성�
 </div>
 <footer class=entry-footer><span title="2024-01-30 18:29:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;88 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] DaemonSets" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-13-daemonset/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>[Kubernetes Study] Resource requirements and limits
-</h2>
-</header>
-<div class=entry-content>
-<p>Resource requirements and limits 각 노드는 CPU와 Memory 리소스를 갖고 있다. 스케쥴러에 이해 Pod가 배치될 때, Pod의 리소스 요청 사항과 노드의 리소스 사용량은 스케쥴링에 직접적인 영향을 미친다.
-Requests 사용법 다음과 같이 spec.containers.resources.requests 를 이용해 Pod에 리소스 정보를 명세할 수 있다.
-apiVersion:v1kind:Podmetadata:name:simple-webapp-colorlabels:name:simple-webapp-colorspec:containers:- name:simple-webapp-colorimage:simple-webapp-colorports:- containerPort:8080resources:requests:memory:"4Gi"cpu:2단위 CPU CPU의 단위는 정수, 소수점, m 을 이용해서 설정할 수 있다. m은 milli의 뜻으로 1/1000이라서 cpu 0.1은 100m과 동일하며, 1은 1000m과 동일하다.
-CPU의 최소 단위는 1m이며 그 이하는 될 수 없다....</p>
-</div>
-<footer class=entry-footer><span title="2024-01-30 18:15:02 +0900 +0900">January 30, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] Resource requirements and limits" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-12-resource-requirements/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

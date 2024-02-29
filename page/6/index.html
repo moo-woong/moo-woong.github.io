@@ -64,6 +64,19 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
+<h2>LeetCode 공부 - Longest Palindrome
+</h2>
+</header>
+<div class=entry-content>
+<p>LeetCode(409) - Longest Palindrome 문제 문자열 s가 주어진다. 문자열 s의 문자들을 재조합하여 Palidrome을 만들 때 가장 긴 Palidrome의 길이를 반환하라.
+입력 Input: s = "abccccdd" 출력 Output: 7 문자열 abccccdd를 재조합해서 가장 큰 길이의 Palidrome을 만들면 dccaccd이므로, 해당 길이인 7을 반환한다.
+풀이 unordered_map으로 각 문자들의 출현빈도를 카운팅하고, 짝수 수를 구해 Palidrome을 계산한다. 라고 0. 처럼 생각했는데 짝수를 카운팅 후 Palidrome의 길이를 계산하는 방법을 몰라서 Solution을 보고 같이 map을 써서 본 풀이를 적는다(even이면 전체사이즈를, odd가 1 초과일때 +1 해주면 되는거였다)....</p>
+</div>
+<footer class=entry-footer><span title="2023-01-16 23:54:27 +0900 +0900">January 16, 2023</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;239 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to LeetCode 공부 - Longest Palindrome" href=https://moo-woong.github.io/posts/algorithm/algo_409_longest_palindrome/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>[Kubernetes Study] k8s components - kube-apiserver
 </h2>
 </header>
@@ -110,18 +123,6 @@ Kubernetes 구성요소들 Kubernetes는 contaierized 된 application들의 실�
 </div>
 <footer class=entry-footer><span title="2023-01-15 18:25:02 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;180 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to LeetCode 공부 - Find the Difference" href=https://moo-woong.github.io/posts/algorithm/algo_389_find_the_difference/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>LeetCode 공부 - First Unique Character in a String
-</h2>
-</header>
-<div class=entry-content>
-<p>LeetCode(387) - First Unique Character in a String 문제 문자열 s가 주어진다. 문자열s를 구성하는 문자 중, 한번만 등장하는 문자를 찾고, 그 중 가장 낮은 index를 가진 문자의 index를 반환하라.
-입력 Input: s = "loveleetcode" 출력 Output: 2 문자열 loveleetcode 중 중복되지 않은 문자는 v,t,c,o, 그리고 d 이다. 이 중 가장 낮은 index를 갖는 문자는 v이며, index는 2 이므로, 2를 반환한다. 풀이 문자를 key로 갖고, &lt;int,int> 타입의 pair를 value로 갖는 map을 이용한다....</p>
-</div>
-<footer class=entry-footer><span title="2023-01-15 18:01:29 +0900 +0900">January 15, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;198 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to LeetCode 공부 - First Unique Character in a String" href=https://moo-woong.github.io/posts/algorithm/algo_387_first_unique_character_in_a_string/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

@@ -70,7 +70,21 @@ Posts
 </header>
 <article class=post-entry>
 <header class=entry-header>
-<h2>[Kubernetes Study] Monitor Cluster Components
+<h2>[Kubernetes Study] Rolling Update and Rollbacks
+</h2>
+</header>
+<div class=entry-content>
+<p>Rollout 사용자는 Application의 revision 업데이트를 rollout을 통해 수행할 수 있다. Deployment로 배치된 Application의 rollout예시는 다음과 같다.
+apiVersion:apps/v1kind:Deploymentmetadata:name:myapp-deploymentlabels:app:myapptype:front-endspec:template:metadata:name:myapp-podlabels:app:myapptype:front-endspec:containers:- name:nginx-containerimage:nginxreplicas:3selector:matchLabels:type:front-endRollout Strategy 새로운 Revision 배포방법들은 다양하다
+Recrease 현재 버전의 Pod instance를 모두 삭제하고 새로운 Revision application으로 구성한다. 이 경우 이전 버전의 Pod instance들이 모두 삭제되고 새로운 Revision application이 배치될 때 까지 서비스 장애가 발생한다.
+Rolling Update 구 버전 Pod를 하나 삭제하고 Revision Pod를 새롭게 생성한다. 이 과정을 Pod의 개수만큼 수행하면 Pod가 없어 서비스를 제공하지 못하는 장애는 발생하지 않는다....</p>
+</div>
+<footer class=entry-footer><span title="2024-02-29 12:05:58 +0000 UTC">February 29, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;551 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Rolling Update and Rollbacks" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-5-1-rolling-update-rollback/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>[Kubernetes Study] Monitor Cluster Components and Application Logs
 </h2>
 </header>
 <div class=entry-content>
@@ -78,8 +92,8 @@ Posts
 노드 레벨의 통계: 클러스터를 구성하는 노드의 개수 및 상태 성능지표: CPU, 메모리 사용량, 디스크, 네트워크 I/O Pod 레벨지표: Pod의 개수, Pod의 자원 사용량 등 이처럼 다양한 성능지표들을 모니터링 할 수 있으나 중앙화된 관리와 해당 정보를 가공할 수 있는 솔루션이 필요하다.
 k8s에는 default로 탑재되는 모니터링 솔루션이 없지만 오픈소스로 공개된 다양한 솔루션들으 있으며 사용할 수 있다. 예를들면 Prometheus, Elastic Stack, Datadog, dynatrace등이 있다....</p>
 </div>
-<footer class=entry-footer><span title="2024-02-27 11:13:52 +0000 UTC">February 27, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;315 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to [Kubernetes Study] Monitor Cluster Components" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/></a>
+<footer class=entry-footer><span title="2024-02-27 11:13:52 +0000 UTC">February 27, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;455 words&nbsp;·&nbsp;Me</footer>
+<a class=entry-link aria-label="post link to [Kubernetes Study] Monitor Cluster Components and Application Logs" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
@@ -121,19 +135,6 @@ kubernetes의 기본 스케쥴러는 kube-scheduler이며, 사용자가 생성�
 </div>
 <footer class=entry-footer><span title="2024-02-13 13:24:42 +0000 UTC">February 13, 2024</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;271 words&nbsp;·&nbsp;Me</footer>
 <a class=entry-link aria-label="post link to [Kubernetes Study] Static Pod" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-study-14-static-pod/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Kubernetes Raspberry Pi Os
-</h2>
-</header>
-<div class=entry-content>
-<p>How to establish kubernetes cluster using Raspberry Pi OS
-Prepare Raspberry-pi OS image using imager Setting up raspberry-pi OS Update OS and repo sudo apt update -y && sudo apt dist-upgrade -y reboot
-sudo reboot Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-swapfile uninstall sudo apt purge -y dphys-swapfile sudo apt autoremove -y Add cgroups echo " cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1" | sudo tee -a /boot/cmdline.txt Disable and uninstall swap sudo dphys-swapfile swapoff sudo dphys-swapfile uninstall sudo apt purge -y dphys-swapfile sudo apt autoremove -y Or update cmdline...</p>
-</div>
-<footer class=entry-footer><span title="2024-02-13 13:11:30 +0000 UTC">February 13, 2024</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;606 words&nbsp;·&nbsp;Me</footer>
-<a class=entry-link aria-label="post link to Kubernetes Raspberry Pi Os" href=https://moo-woong.github.io/posts/kubernetes/kubernetes-raspberry-pi-os/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

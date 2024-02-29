@@ -9,9 +9,21 @@
       <link>https://moo-woong.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Feb 2024 11:13:52 +0000</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Feb 2024 12:05:58 +0000</lastBuildDate><atom:link href="https://moo-woong.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>[Kubernetes Study] Monitor Cluster Components</title>
+      <title>[Kubernetes Study] Rolling Update and Rollbacks</title>
+      <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-5-1-rolling-update-rollback/</link>
+      <pubDate>Thu, 29 Feb 2024 12:05:58 +0000</pubDate>
+      
+      <guid>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-5-1-rolling-update-rollback/</guid>
+      <description>Rollout 사용자는 Application의 revision 업데이트를 rollout을 통해 수행할 수 있다. Deployment로 배치된 Application의 rollout예시는 다음과 같다.
+apiVersion:apps/v1kind:Deploymentmetadata:name:myapp-deploymentlabels:app:myapptype:front-endspec:template:metadata:name:myapp-podlabels:app:myapptype:front-endspec:containers:- name:nginx-containerimage:nginxreplicas:3selector:matchLabels:type:front-endRollout Strategy 새로운 Revision 배포방법들은 다양하다
+Recrease 현재 버전의 Pod instance를 모두 삭제하고 새로운 Revision application으로 구성한다. 이 경우 이전 버전의 Pod instance들이 모두 삭제되고 새로운 Revision application이 배치될 때 까지 서비스 장애가 발생한다.
+Rolling Update 구 버전 Pod를 하나 삭제하고 Revision Pod를 새롭게 생성한다. 이 과정을 Pod의 개수만큼 수행하면 Pod가 없어 서비스를 제공하지 못하는 장애는 발생하지 않는다.</description>
+    </item>
+    
+    <item>
+      <title>[Kubernetes Study] Monitor Cluster Components and Application Logs</title>
       <link>https://moo-woong.github.io/posts/kubernetes/kubernetes-study-4-1-monitor-cluster/</link>
       <pubDate>Tue, 27 Feb 2024 11:13:52 +0000</pubDate>
       
